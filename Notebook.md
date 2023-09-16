@@ -13,7 +13,7 @@ Three people won the prize:
 
 This brings about the problem of **`local realism (局部现实主义)`** and **`principle of locality (定域性原理)`**, which is believed true in CLASSICAL mechanics or electromagnetics.
 
-> 思考：科学哲学上，“真实”是如何定义的？
+> 作业：1. 思考：科学哲学上，“真实”是如何定义的？
 
 ### 1. Newtonian Mechanics, 1687: 牛顿力学
 
@@ -32,16 +32,99 @@ $$ \overrightarrow F = -\frac{Gm_1m_2}{r^2} \hat {\vec r} $$
 $$ {\partial \vec v \over \partial t} +(\vec v \cdot \overrightarrow V) \cdot \vec v = -{1 \over \rho} \overrightarrow \nabla p + \mu \nabla^2 \vec v + \vec g$$
 
 - #### Euler-Lagrange equation: 拉格朗日方程
-$${\partial L \over \partial q_\alpha}-{\mathrm d \over \mathrm dt}\cdot {\partial L \over \partial \dot q_\alpha}=0, L=T-V$$
+$${\partial L \over \partial q_\alpha}-{\mathrm d \over \mathrm dt} {\partial L \over \partial \dot q_\alpha}=0, \ L=T-V$$
 
-- #### Hamilton Mechanics: 哈密顿力学
+- #### Hamilton Canonical Equations: 哈密顿正则方程
 $$
 \left \{
-\begin{array} {c}
-\dot q_\alpha = \dfrac{\partial H}{\partial p_\alpha} \\ 
-\dot p_\alpha = \dfrac{\partial H}{\partial q_\alpha}
+\begin{array} {l}
+\dfrac{\partial H}{\partial p_\alpha}=\dot q_\alpha \\[3ex]
+\dfrac{\partial H}{\partial q_\alpha}=-\dot p_\alpha
 \end{array}
 \right.
 $$
 
-### 3. 
+### 3. Schrödinger Equation: 薛定谔方程
+
+$$-{ \hbar \over 2m } \nabla ^2 \psi + U \psi =i\hbar {\partial \psi \over \partial t}$$ 
+
+**Freeman Dyson: Four jokes by Nature**
+- `the square root of minus one that the physicist Erwin Schrödinger put into his wave equation when he invented wave mechanics` 被放入薛定谔波函数的-1的平方根
+- `the precise linearity of quantum mechanics, the fact that the possible states of any physical object form a linear space` 量子力学的精确线性，即物理对象的所有可能状态构成线性空间
+- `the existence of quasi-crystals` 拟晶体的存在
+- `a similarity in behavior between quasi-crystals and the zeros of the Riemann Zeta function` 拟晶体和黎曼$\zeta$函数在行为上的相似性
+
+
+**Maxwell's equations: 麦克斯韦方程组**
+
+$$
+\left \{
+\begin{array} {c} 
+\overrightarrow \nabla \cdot \overrightarrow E = \dfrac{\rho}{ε_0} \\[2ex]
+\overrightarrow \nabla \cdot \overrightarrow E = 0 \\[2ex]
+\overrightarrow \nabla \times \overrightarrow E = \dfrac{\partial B}{\partial t} \\[2ex]
+\overrightarrow \nabla \times \overrightarrow B = \mu_0(\vec j+ε_0 \dfrac{\partial \overrightarrow E}{ \partial t}) \\
+\end{array} 
+\right.
+$$
+
+### 4. General Relativity: 广义相对论
+
+**爱因斯坦引力场方程**
+
+$$G_{\mu v}=R_{\mu v}-{1\over2}g_{\mu v}R=\frac{4\pi G}{c^4}T_{\mu v}$$
+
+```
+Matter tells space how to curve.
+Curvature tells matter how to move.
+```
+
+### 5. Time reversal: A few examples 时间反演性的一些例子
+
+$$t \mapsto -t$$
+$$\vec r \mapsto \vec r$$
+$$\vec v = {\mathrm d \vec r \over \mathrm dt} \mapsto -v$$
+$$\vec a = {\mathrm d \vec v \over \mathrm dt} \mapsto a$$
+$$\cdots$$
+$$\overrightarrow {U_d} \mapsto -\overrightarrow {U_d} $$
+$$\vec j \mapsto - \vec j$$
+$$\overrightarrow B \mapsto - \overrightarrow B $$
+
+#### (1) Lagrangians: 拉格朗日量
+
+CPT invariant: 
+- C: `Charge Conjugation` 电荷共轭变换
+- P: `Parity` 空间反射
+- T: `Time Reversal` 时间反演
+
+We can conclude from the Maxwell equations that Lagrangians remains invariable under CPT changes.
+
+#### (2) Schrödinger Equation: 薛定谔方程
+
+$$\Psi(\vec r,t) \mapsto \Psi(\vec r,-t) \ \ \ \ (*)$$
+$$t \mapsto -t$$
+$$\mathrm i \mapsto -\mathrm i$$
+
+It can be seen that whether the Schrödinger equation remains unchanged under time reversal depends on $(*)$.
+
+#### (3) Euler-Lagrange equation: 拉格朗日方程
+The equation is $${\mathrm d \over \mathrm dt} {\partial L \over \partial \dot q_\alpha}- {\partial L \over \partial q_\alpha}=0, \ L= T - V $$ , in which $q_\alpha$ is the **generalized coordinate** (广义坐标), and $\dot q_\alpha$ is its **generalized velocity** (广义速度).
+
+> 作业：2. 推导哈密顿正则方程 
+> $$
+\left \{
+\begin{array} {l}
+\dfrac{\partial H}{\partial p_\alpha}=\dot q_\alpha \\[3ex]
+\dfrac{\partial H}{\partial q_\alpha}=-\dot p_\alpha
+\end{array}
+\right.
+> $$
+> 的时间反演不变性。
+
+
+
+### 6. Hamilton-Jacobian equation: 哈密顿-雅可比方程
+
+$$S=  \int^{t_1}_{t_2} L \mathrm dt$$
+$$ {\partial S \over \partial t}+H =0$$
+
