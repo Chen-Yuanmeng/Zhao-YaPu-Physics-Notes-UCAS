@@ -61,7 +61,7 @@ $$
 \left \{
 \begin{array} {c} 
 \overrightarrow \nabla \cdot \overrightarrow E = \dfrac{\rho}{\varepsilon_0} \\[2ex]
-\overrightarrow \nabla \cdot \overrightarrow E = 0 \\[2ex]
+\overrightarrow \nabla \cdot \overrightarrow B = 0 \\[2ex]
 \overrightarrow \nabla \times \overrightarrow E = \dfrac{\partial B}{\partial t} \\[2ex]
 \overrightarrow \nabla \times \overrightarrow B = \mu_0(\vec j+\varepsilon_0 \dfrac{\partial \overrightarrow E}{ \partial t}) \\
 \end{array} 
