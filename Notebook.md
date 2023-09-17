@@ -222,7 +222,7 @@ A_x & A_y & A_z \\
 
 #### (4) Some practice 应用
 
-In field theory, we define $\vec r = x \hat i + y \hat j + z \hat k$, and thus we have $\hat{\vec r} = \hat i + \hat j + \hat k$.
+In field theory, we define $\vec r = x \hat i + y \hat j + z \hat k$.
 
 ##### ① $\vec r$ 的散度
 
