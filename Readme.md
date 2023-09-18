@@ -20,7 +20,6 @@
 每个发行版中会有以下文件：
 - 单个笔记文件（命名为`日期.html`，如`20230911.html`）
 - 目前所有单个笔记文件的合集（命名为`Notebook.zip`）
-- 笔记文件合集（一个文件包含所有已发布笔记，命名为`Notebook.html`）
 
 ### 传送门：
 - [Gitee: cyqm/赵亚溥老师物理笔记 UCAS 发行版](https://gitee.com/cyqm_zz/zhao-ya-pu-physics-notes-ucas/releases)
