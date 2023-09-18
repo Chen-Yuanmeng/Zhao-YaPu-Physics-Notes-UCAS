@@ -328,7 +328,7 @@ Two kinds of waves:
 ### 2. The derivation of Schrödinger Equation 薛定谔方程的推导
 
 #### (1) Wave function 波函数 $\psi$
-$$\psi = \mathrm e^{\mathrm i(\vec k \cdot \vec r - \omega t)} =  \mathrm e^{\mathrm i(\vec p \cdot \vec r - E t)}$$
+$$\psi = \mathrm e^{\mathrm i(\vec k \cdot \vec r - \omega t)} =  \mathrm e^{\mathrm {i \over \hbar}(\vec p \cdot \vec r - E t)}$$
 
 Because the wave function is an indication of probability, it must exists that $$\iiint _{(V)} |\psi|^2 \mathrm d\tau=1.$$
 
