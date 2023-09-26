@@ -125,7 +125,7 @@ The equation is $${\mathrm d \over \mathrm dt} {\partial L \over \partial \dot q
 
 ### 6. Hamilton-Jacobian equation 哈密顿-雅可比方程
 
-$$S=  \int^{t_1}_{t_2} L \mathrm dt$$
+$$S= \int^{t_1}_{t_2} L \mathrm dt$$
 $$ {\partial S \over \partial t}+H =0$$
 
 
@@ -249,7 +249,7 @@ $$\overrightarrow F = - {G m_1 m_2 \over r^3}\vec r = - {G m_1 m_2 \over r^2} \h
 $$\begin{align*}
 \overrightarrow \nabla \vec r & = \overrightarrow \nabla \otimes \vec r \\
 & = ({\partial \over \partial x}\hat i + {\partial \over \partial y}\hat j + {\partial \over \partial z}\hat k) \otimes (x \hat i + y \hat j + z \hat k) \\
-& = {\partial x \over \partial x} (\hat i \otimes \hat i) + {\partial y \over \partial y}(\hat j \otimes \hat j)  + {\partial z \over \partial z}(\hat k \otimes \hat k)\\
+& = {\partial x \over \partial x} (\hat i \otimes \hat i) + {\partial y \over \partial y}(\hat j \otimes \hat j) + {\partial z \over \partial z}(\hat k \otimes \hat k)\\
 & = (\hat i \otimes \hat i) + (\hat j \otimes \hat j) + (\hat k \otimes \hat k) \\
 & = \underline {\underline I} \\
 & = \begin{bmatrix}
@@ -282,7 +282,7 @@ $$
 \end{array}
 \right.
 $$
-In this equation, $\Box$ 或 $\Box^2$ is called the d'Alembert or quabla operator (达朗贝尔算符), and $$\Box  =\Box^2 = \dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2}- \nabla^2.$$
+In this equation, $\Box$ 或 $\Box^2$ is called the d'Alembert or quabla operator (达朗贝尔算符), and $$\Box =\Box^2 = \dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2}- \nabla^2.$$
 
 This set of equation is linear, because it is derived from the linear Maxwell equations.
 
@@ -315,7 +315,7 @@ E=\hbar \omega
 \right.
 $$
 
-$[\hbar]$ is the dimension (量纲) of action (作用量) $S=\int_{t_1}^{t_2}L\mathrm dt$, and the three conjugations above is called  `action conjugation 作用量共轭` .
+$[\hbar]$ is the dimension (量纲) of action (作用量) $S=\int_{t_1}^{t_2}L\mathrm dt$, and the three conjugations above is called `action conjugation 作用量共轭` .
 
 In it $\vec k$ is the **wave vector (波矢)**, and it reflects the direction in which the wave propagates (传播). $k = \dfrac{2 \pi}{\lambda}$.
 
@@ -328,7 +328,7 @@ Two kinds of waves:
 ### 2. The derivation of Schrödinger Equation 薛定谔方程的推导
 
 #### (1) Wave function 波函数 $\psi$
-$$\psi = \mathrm e^{\mathrm i(\vec k \cdot \vec r - \omega t)} =  \mathrm e^{\mathrm {i \over \hbar}(\vec p \cdot \vec r - E t)}$$
+$$\psi = \mathrm e^{\mathrm i(\vec k \cdot \vec r - \omega t)} = \mathrm e^{\mathrm {i \over \hbar}(\vec p \cdot \vec r - E t)}$$
 
 Because the wave function is an indication of probability, it must exists that $$\iiint _{(V)} |\psi|^2 \mathrm d\tau=1.$$
 
@@ -347,7 +347,7 @@ $${\partial \psi \over \partial t} = -{\mathrm i \over \hbar}E \psi$$
 
 $$\Rightarrow E \psi = \mathrm i \hbar {\partial \over \partial t} \psi$$
 
-$$\Rightarrow \hat E = \mathrm i \hbar {\partial \over \partial t}  $$
+$$\Rightarrow \hat E = \mathrm i \hbar {\partial \over \partial t} $$
 
 From this we can see that energy is linked with time (能量与时间相联系), and consequently, the conservation of energy (能量守恒) is related to time translation invariance (时间平移不变性).
 
@@ -433,7 +433,7 @@ Einstein告诉我们，一个理论，要只发表一篇论文；
 *人间：车行马走，柴米油盐*
 
 *牛顿力学由天上产生，是一种哲学问题*
-*~~友情推介：人间 - 王菲(bushi)~~*
+*~~友情推介：人间 - 王菲 (bushi)~~*
 
 *1969 美国宇航员William Anders：“牛顿在驾驶飞船” VS 某某某 “星球飘在那里”*
 
@@ -549,7 +549,7 @@ $$
 & = {\hbar \omega \over 2},
 \end {align*}
 $$
-where $=$ holds **if and only if** $${\hbar^2 \over 8m(\Delta x)^2} = {1 \over 2} m \omega^2 (\Delta x)^2, $$ that is, $$\Delta x = \sqrt{\hbar  \over 2 m \omega}.$$
+where $=$ holds **if and only if** $${\hbar^2 \over 8m(\Delta x)^2} = {1 \over 2} m \omega^2 (\Delta x)^2, $$ that is, $$\Delta x = \sqrt{\hbar \over 2 m \omega}.$$
 
 *有些学着很聪明，以为什么都懂，但是其实他只懂了30%。*
 *有些学者看起来呆头呆脑，但是呆头呆脑的人做研究做得踏实，这才是我们真正需要的大聪明。*
@@ -578,7 +578,7 @@ $$
 \begin {align*}
 \dfrac{\mathrm i\hbar \dfrac{\mathrm d \mathcal{T}(t) }{\mathrm d t}}{\mathcal{T}(t)} & =E \\[3ex]
 \dfrac{\mathrm d \mathcal{T}(t) }{\mathcal{T}(t)} & = -{\mathrm iE \over \hbar}\mathrm dt \\[2ex]
-\int {\dfrac{\mathrm d \mathcal{T}(t) }{\mathcal{T}(t)}} & = -{\mathrm iE \over \hbar} \int {\mathrm  dt} \\[2ex]
+\int {\dfrac{\mathrm d \mathcal{T}(t) }{\mathcal{T}(t)}} & = -{\mathrm iE \over \hbar} \int {\mathrm dt} \\[2ex]
 \ln \mathcal{T}(t) & = -{\mathrm iE \over \hbar} t +C \\[2ex]
 \mathrm e^{\ln \mathcal{T}(t)} & = \mathrm e^{-\frac{\mathrm iE }{\hbar} t +C} \\
 \mathcal{T}(t) & = \mathcal{T}_0 \cdot \mathrm e^{-{\mathrm iE \over \hbar} t}\\
@@ -589,16 +589,16 @@ in which $C$ is the constant of integration (积分常数), and $\mathrm e^C = \
 
 #### (2) $\Phi(x)$
 
-We can easily get this equation which does not include time $t$ in it: $$-\dfrac{ \hbar^2 }{2m}\dfrac{\mathrm d^2 \Phi(x)}{\mathrm d x ^2 } + U \Phi(x)  =E\Phi(x),$$ which is called **Stationary Schrödinger Equation 定态薛定谔方程**.
+We can easily get this equation which does not include time $t$ in it: $$-\dfrac{ \hbar^2 }{2m}\dfrac{\mathrm d^2 \Phi(x)}{\mathrm d x ^2 } + U \Phi(x) =E\Phi(x),$$ which is called **Stationary Schrödinger Equation 定态薛定谔方程**.
 
-Under the SHO case, $U=\dfrac{1}{2}m\omega^2x^2$, and we have $$-\dfrac{ \hbar^2 }{2m}\dfrac{\mathrm d^2 \Phi(x)}{\mathrm d x ^2 } + \dfrac{1}{2}m\omega^2x^2 \Phi(x)  =E\Phi(x).$$
+Under the SHO case, $U=\dfrac{1}{2}m\omega^2x^2$, and we have $$-\dfrac{ \hbar^2 }{2m}\dfrac{\mathrm d^2 \Phi(x)}{\mathrm d x ^2 } + \dfrac{1}{2}m\omega^2x^2 \Phi(x) =E\Phi(x).$$
 Its general solution is $$\Phi^*(x) = C \exp(-{\alpha \over 2} x^2).$$
 
 Find the first and second order derivatives for $\Phi^*$:
 
 $${\mathrm d\Phi^*(x) \over \mathrm dx} = -\alpha x\cdot C \exp(-{\alpha \over 2} x^2) = -\alpha x \cdot \Phi^*(x)$$
 
-$${\mathrm d^2\Phi^*(x) \over \mathrm dx^2} = -\alpha (1-\alpha x^2) \cdot C  \exp(-{\alpha \over 2} x^2) = -\alpha (1-\alpha x^2) \cdot \Phi^*(x)$$
+$${\mathrm d^2\Phi^*(x) \over \mathrm dx^2} = -\alpha (1-\alpha x^2) \cdot C \exp(-{\alpha \over 2} x^2) = -\alpha (1-\alpha x^2) \cdot \Phi^*(x)$$
 
 And we have $$-\dfrac{ \hbar^2 }{2m}(-\alpha)(1-\alpha x^2)\cdot \Phi^*(x)+\dfrac{1}{2}m\omega^2x^2 \Phi^*(x)=E \Phi^*(x)$$
 
@@ -627,3 +627,111 @@ E = \dfrac{\omega \hbar}{2} \\[2ex]
 \right.
 $$
 
+## 2023/9/25
+
+### 1. Gravity and gravitational potential 引力和引力势
+
+$$U = - {GMm \over r}$$
+
+$$\overrightarrow F(\vec r) = - \overrightarrow \nabla U = - {GMm \over r^2} \hat {\vec r}$$
+
+*为什么有$r^2$项？因为场是点源产生的球面场，场对应的力有$r^2$形式。*
+
+We can get $U(r_0)$ from $\overrightarrow F(\vec r)$:
+
+$$U(r_0) = \int^{+\infin}_{r_0} -{GMm \over r^2} \mathrm dr = \left.{GMm \over r} \right|^{+\infin}_{r_0} = -{GMm \over r_0}$$
+
+Near the ground of earth, at height $h(h \ll R)$, we can have approximately $U=mgh$. That's because 
+
+$$
+\begin{align*}
+U(R+h)- U(R) & = {GMm \over R} - {GMm \over R+h} \\[2ex]
+& = GMm \cdot {h \over R(R+h)} \\[2ex]
+& \approx {GMmh \over r^2} \\[2ex]
+& = mgh.
+\end{align*}
+$$
+
+
+### 2. The Great Debate for String, 1730~1780:
+- Daniel Bernoulli: the first to propose a partial differential equation 第一个提出偏微分方程的人
+- D'Alembert: superposition principle 叠加原理
+- Lagrange
+- Euler
+
+John Bernoulli: `the discretization of string vibration 弦振动的离散化` , which sees the string as a string of beads (珠子). 
+
+### 3. Gauss 高斯
+
+*The three most renowned mathematicians: Archimedes 阿基米德, Isaac Newton 伊萨克·牛顿, and **Gauss** 高斯.*
+
+#### (1) Gauss's theorem (electromagnetics) 高斯定理
+
+Differential form 微分形式: 
+
+$$\overrightarrow \nabla \cdot \overrightarrow E = {\rho \over \varepsilon_0}, $$
+
+or integral form 积分形式: 
+
+$$\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \overrightarrow E \cdot \mathrm d \overrightarrow S = {Q_{\mathrm{enc}} \over \varepsilon_0},$$
+
+in which $\mathrm {enc} $ stands for **enclosed**.
+
+Flux 通量: In vector calculus flux is a scalar quantity, defined as the surface integral of the perpendicular component of a vector field over a surface. 单位面积、单位时间通过某个面的量
+
+$$\overrightarrow \nabla \cdot \overrightarrow E = \mu_0(\vec j + \varepsilon_0 {\partial \overrightarrow E \over \partial t})$$
+
+$$\overrightarrow \nabla \cdot (\overrightarrow \nabla \times \overrightarrow E ) = 0 \ \mathsf{(旋度无散)}$$
+
+
+Electric density conservation 电荷密度守恒定律 (?): 
+$${\partial \rho \over \partial t} + \overrightarrow \nabla \cdot \overrightarrow J = {\partial \rho \over \partial t}+\overrightarrow \nabla \cdot (\rho \vec v) = 0$$
+
+#### (2) Gauss's law of gravity 引力场的高斯定理
+
+Differential form 微分形式: 
+
+$$\overrightarrow \nabla \cdot \vec g = -4 \pi G \rho \ \ (\rho = {M_{\mathrm{enc}} \over V}),$$
+
+or integral form 积分形式: 
+
+$$\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ \vec g \cdot \mathrm d \overrightarrow S = -4 \pi G M_{\mathrm{enc}},$$
+
+where $$\vec g = - {GM \over r^2} \hat {\vec r}.$$
+
+This can be derived in the following way:
+
+$$\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ {GMm \over r^2} \hat {\vec r} \cdot \mathrm d \overrightarrow S = GMm \iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ {\mathrm d S_\perp \over r^2} = 4 \pi GMm,$$
+
+where $$\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ {\mathrm d S_\perp \over r^2} = \iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ \mathrm d \Omega = 4 \pi, $$
+
+and $\Omega$ is a solid angle (立体角).
+
+Because gravity is a conservative force, $$\overrightarrow \nabla \times \vec g = \vec 0.$$
+
+When $$\vec g = - \overrightarrow \nabla \varphi,$$ where $\varphi$ is the gravitational potential.
+
+Associate it with the differential form of Gauss's law of gravity, and  we get $$\nabla ^2 \varphi = 4 \pi G \rho,$$ which is called the **Poisson's equation (泊松方程) for gravitational potential**.
+
+Note: when a certain potential $\varphi$ has $$\nabla ^2 \varphi = 0$$, we call this equation a **Laplace's equation**. If $$\nabla ^2 \varphi \neq 0$$, we call it a **Poisson's equation**. 
+
+#### (3) Gauss's divergence theorem 高斯散度定理
+
+$$\iiint \overrightarrow \nabla \cdot \overrightarrow F \mathrm dV = \iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ \overrightarrow F \cdot \mathrm d \overrightarrow S$$
+
+The definition of 
+
+
+### 4. Black holes, 1968 黑洞
+
+singularity 寄点
+
+Roger Penrose: 2020 Nobel Prize for Physics
+
+From $$ {1 \over 2} mv_2^2-{GMm \over R} = 0,$$ in which $R$ is the boundary of a globe (i.e. the Earth; the universe), and we have $$v_2 =\sqrt{2GM \over R}.$$
+
+In 1784 and 1796 respectively, John Michell and Pierre-Simon Laplace proposed that when $v_2 = c$, we can get the Schwarzchild radius: $$R = r_s = {2GM \over c^2},$$ which, by incident, is completely in correspondence with the result Schwarzchild got using general relativity (广义相对论).
+
+To calculate the boundary of the universe, let $$r_s = {2GM_{\mathrm {universe}} \over c^2} = {2G \over c^2} \cdot {4 \over 3} \pi \rho r_s^3,$$ in which $\rho \approx 10^{-29} \mathrm{g/cm^3}$ is the average density of the universe.
+
+$$r_s = \sqrt{3c^2 \over 8 \pi G \rho} \approx 10^{26} \mathrm m.$$
