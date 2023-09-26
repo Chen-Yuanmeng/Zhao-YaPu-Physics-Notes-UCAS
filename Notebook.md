@@ -677,6 +677,56 @@ $$\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \overrightarrow E \cdot
 
 in which $\mathrm {enc} $ stands for **enclosed**.
 
+## 2023/9/25
+
+### 1. Gravity and gravitational potential 引力和引力势
+
+$$U = - {GMm \over r}$$
+
+$$\overrightarrow F(\vec r) = - \overrightarrow \nabla U = - {GMm \over r^2} \hat {\vec r}$$
+
+*为什么有$r^2$项？因为场是点源产生的球面场，场对应的力有$r^2$形式。*
+
+We can get $U(r_0)$ from $\overrightarrow F(\vec r)$:
+
+$$U(r_0) = \int^{+\infin}_{r_0} -{GMm \over r^2} \mathrm dr = \left.{GMm \over r} \right|^{+\infin}_{r_0} = -{GMm \over r_0}$$
+
+Near the ground of earth, at height $h(h \ll R)$, we can have approximately $U=mgh$. That's because 
+
+$$
+\begin{align*}
+U(R+h)- U(R) & = {GMm \over R} - {GMm \over R+h} \\[2ex]
+& = GMm \cdot {h \over R(R+h)} \\[2ex]
+& \approx {GMmh \over r^2} \\[2ex]
+& = mgh.
+\end{align*}
+$$
+
+
+### 2. The Great Debate for String, 1730~1780:
+- Daniel Bernoulli: the first to propose a partial differential equation 第一个提出偏微分方程的人
+- D'Alembert: superposition principle 叠加原理
+- Lagrange
+- Euler
+
+John Bernoulli: `the discretization of string vibration 弦振动的离散化` , which sees the string as a string of beads (珠子). 
+
+### 3. Gauss 高斯
+
+*The three most renowned mathematicians: Archimedes 阿基米德, Isaac Newton 伊萨克·牛顿, and **Gauss** 高斯.*
+
+#### (1) Gauss's theorem (electromagnetics) 高斯定理
+
+Differential form 微分形式: 
+
+$$\overrightarrow \nabla \cdot \overrightarrow E = {\rho \over \varepsilon_0}, $$
+
+or integral form 积分形式: 
+
+$$\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \overrightarrow E \cdot \mathrm d \overrightarrow S = {Q_{\mathrm{enc}} \over \varepsilon_0},$$
+
+in which $\mathrm {enc} $ stands for **enclosed**.
+
 Flux 通量: In vector calculus flux is a scalar quantity, defined as the surface integral of the perpendicular component of a vector field over a surface. 单位面积、单位时间通过某个面的量
 
 $$\overrightarrow \nabla \cdot \overrightarrow E = \mu_0(\vec j + \varepsilon_0 {\partial \overrightarrow E \over \partial t})$$
@@ -719,7 +769,9 @@ Note: when a certain potential $\varphi$ has $$\nabla ^2 \varphi = 0$$, we call 
 
 $$\iiint \overrightarrow \nabla \cdot \overrightarrow F \mathrm dV = \iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ \overrightarrow F \cdot \mathrm d \overrightarrow S$$
 
-The definition of 
+The definition of divergence (散度) of a vector $\overrightarrow A$ in mathematics:
+
+$$\overrightarrow \nabla \cdot \overrightarrow A = \lim _{V \rightarrow0}\left({1 \over V}\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \overrightarrow A \cdot \mathrm d \overrightarrow S\right)$$
 
 
 ### 4. Black holes, 1968 黑洞
