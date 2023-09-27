@@ -673,7 +673,7 @@ $$\overrightarrow \nabla \cdot \overrightarrow E = {\rho \over \varepsilon_0}, $
 
 or integral form 积分形式: 
 
-$$\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \overrightarrow E \cdot \mathrm d \overrightarrow S = {Q_{\mathrm{enc}} \over \varepsilon_0},$$
+$$\oiint_{\partial V} \overrightarrow E \cdot \mathrm d \overrightarrow S = {Q_{\mathrm{enc}} \over \varepsilon_0},$$
 
 in which $\mathrm {enc} $ stands for **enclosed**.
 
@@ -723,7 +723,7 @@ $$\overrightarrow \nabla \cdot \overrightarrow E = {\rho \over \varepsilon_0}, $
 
 or integral form 积分形式: 
 
-$$\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \overrightarrow E \cdot \mathrm d \overrightarrow S = {Q_{\mathrm{enc}} \over \varepsilon_0},$$
+$$\oiint_{\partial V}\overrightarrow E \cdot \mathrm d \overrightarrow S = {Q_{\mathrm{enc}} \over \varepsilon_0},$$
 
 in which $\mathrm {enc} $ stands for **enclosed**.
 
@@ -745,15 +745,15 @@ $$\overrightarrow \nabla \cdot \vec g = -4 \pi G \rho \ \ (\rho = {M_{\mathrm{en
 
 or integral form 积分形式: 
 
-$$\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ \vec g \cdot \mathrm d \overrightarrow S = -4 \pi G M_{\mathrm{enc}},$$
+$$\oiint_{\partial V} \vec g \cdot \mathrm d \overrightarrow S = -4 \pi G M_{\mathrm{enc}},$$
 
 where $$\vec g = - {GM \over r^2} \hat {\vec r}.$$
 
 This can be derived in the following way:
 
-$$\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ {GMm \over r^2} \hat {\vec r} \cdot \mathrm d \overrightarrow S = GMm \iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ {\mathrm d S_\perp \over r^2} = 4 \pi GMm,$$
+$$\oiint_{\partial V} {GMm \over r^2} \hat {\vec r} \cdot \mathrm d \overrightarrow S = GMm \oiint_{\partial V} {\mathrm d S_\perp \over r^2} = 4 \pi GMm,$$
 
-where $$\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ {\mathrm d S_\perp \over r^2} = \iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ \mathrm d \Omega = 4 \pi, $$
+where $$\oiint_{\partial V} {\mathrm d S_\perp \over r^2} = \oiint_{\partial V} \mathrm d \Omega = 4 \pi, $$
 
 and $\Omega$ is a solid angle (立体角).
 
@@ -767,11 +767,11 @@ Note: when a certain potential $\varphi$ has $$\nabla ^2 \varphi = 0$$, we call 
 
 #### (3) Gauss's divergence theorem 高斯散度定理
 
-$$\iiint \overrightarrow \nabla \cdot \overrightarrow F \mathrm dV = \iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ \overrightarrow F \cdot \mathrm d \overrightarrow S$$
+$$\iiint \overrightarrow \nabla \cdot \overrightarrow F \mathrm dV = \oiint_{\partial V} \overrightarrow F \cdot \mathrm d \overrightarrow S$$
 
 The definition of divergence (散度) of a vector $\overrightarrow A$ in mathematics:
 
-$$\overrightarrow \nabla \cdot \overrightarrow A = \lim _{V \rightarrow0}\left({1 \over V}\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \overrightarrow A \cdot \mathrm d \overrightarrow S\right)$$
+$$\overrightarrow \nabla \cdot \overrightarrow A = \lim _{V \rightarrow0}\left({1 \over V}\oiint_{\partial V} \overrightarrow A \cdot \mathrm d \overrightarrow S\right)$$
 
 
 ### 4. Black holes, 1968 黑洞
@@ -808,18 +808,18 @@ $$
 #### (1) Definition 定义
 
 - The flux (通量) of $\overrightarrow A$ is defined as 
-$$ \iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \overrightarrow A \cdot \mathrm d \overrightarrow S$$ 
-Gauss's divergence theorem (高斯散度定理): $$\iiint (\overrightarrow \nabla \cdot \overrightarrow F) \mathrm dV = \iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ \ \overrightarrow F \cdot \mathrm d \overrightarrow S$$
+$$ \oiint_{\partial V} \overrightarrow A \cdot \mathrm d \overrightarrow S$$ 
+Gauss's divergence theorem (高斯散度定理): $$\iiint (\overrightarrow \nabla \cdot \overrightarrow F) \mathrm dV = \oiint_{\partial V} \overrightarrow F \cdot \mathrm d \overrightarrow S$$
 
-- The circulation of $\overrightarrow A$ is defined as $$\int \!\!\!\!\!\!\! \bigcirc \overrightarrow A \cdot \mathrm d \vec l$$
-Stokes' theorem (斯托克斯公式): $$\iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ (\overrightarrow \nabla \times \overrightarrow A) \cdot \mathrm d \overrightarrow S = \int \!\!\!\!\!\!\! \bigcirc \overrightarrow A \cdot \mathrm d \vec l.$$
+- The circulation of $\overrightarrow A$ is defined as $$\oint \overrightarrow A \cdot \mathrm d \vec l$$
+Stokes' theorem (斯托克斯公式): $$\oiint_{\partial V} (\overrightarrow \nabla \times \overrightarrow A) \cdot \mathrm d \overrightarrow S = \oint \overrightarrow A \cdot \mathrm d \vec l.$$
 
 #### (2) 3 equivalent conditions a conservative force field satisfies 保守立场满足的三个等价条件
 
 $$
 \begin {align}
 \overrightarrow \nabla \times \vec f = \vec 0 \\[2ex]
-\int \!\!\!\!\!\!\! \bigcirc \vec f \cdot \mathrm d \vec r = 0 \\[1ex]
+\oint \vec f \cdot \mathrm d \vec r = 0 \\[1ex]
 \vec f = - \overrightarrow \nabla \varphi
 \end {align}
 $$
@@ -828,7 +828,7 @@ Proof of equivalency 证明等价性:
 
 ##### $(1) \Rightarrow (2)$:
 
-$$\int \!\!\!\!\!\!\! \bigcirc \vec f \cdot \mathrm d \vec r = \iint_{\partial V}\!\!\!\!\!\!\!\!\!\!\!\!\bigcirc \ \ (\overrightarrow \nabla \times \vec f) \cdot \mathrm d \overrightarrow S = 0$$
+$$\oint \vec f \cdot \mathrm d \vec r = \oiint_{\partial V} (\overrightarrow \nabla \times \vec f) \cdot \mathrm d \overrightarrow S = 0$$
 
 ##### $(2) \Rightarrow (3)$:
 
