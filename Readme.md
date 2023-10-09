@@ -19,9 +19,9 @@
 - 目前所有单个笔记文件的合集（命名为`Notebook.zip`）
 
 ### 传送门：
-- [GitLink: cyqm/赵亚溥老师物理笔记 UCAS 发行版](https://www.gitlink.org.cn/cyqm/Zhao-YaPu-Physics-Notes-UCAS/releases)
 - [Gitee: cyqm/赵亚溥老师物理笔记 UCAS 发行版](https://gitee.com/cyqm_zz/zhao-ya-pu-physics-notes-ucas/releases)
 - [GitHub: Chen-Yuanmeng/Zhao-YaPu-Physics-Notes-UCAS Release](https://github.com/Chen-Yuanmeng/Zhao-YaPu-Physics-Notes-UCAS/releases)
+- [GitLink: cyqm/赵亚溥老师物理笔记 UCAS 发行版](https://www.gitlink.org.cn/cyqm/Zhao-YaPu-Physics-Notes-UCAS/releases)
 
 ## 附：VS Code打开Markdown文件预览教程
 下面附上教程：
