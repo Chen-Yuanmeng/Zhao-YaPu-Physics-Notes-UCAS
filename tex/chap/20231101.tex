@@ -1,0 +1,230 @@
+\chapter{2023/11/01}\label{20231101}
+
+\emph{如果你对一个问题了解不深，但你仍去做科普，那么你很有可能造成误导的效果。}
+
+\section{Tea leaf paradox
+茶叶佯谬}\label{tea-leaf-paradox-ux8336ux53f6ux4f6fux8c2c}
+
+When the fluid is stirred, stirring makes the primary flow (as shown in
+the picture). It is easy to know that the surface of the water is a
+paraboloid (抛物面), which is higher near the edge of the cup. Thus, the
+pressure near the edge is greater than the center.
+
+According to Bernoulli's principle, the greater the pressure, the less
+the speed of flow.
+
+Thus the centrifugal force is weaker near the bottom than higher up,
+leading to a secondary flow (二次流) that goes outwards at the top, down
+along the outer edge, inwards along the bottom, bringing the leaves to
+the center, and then up again.
+
+\begin{center}
+    \includegraphics[height=100pt]{assets/Tea_leaf_paradox.png}
+    \captionof{figure}{Primary and secondary flow in the tea leaf paradox}
+\end{center}
+
+\begin{quote}
+作业：拜耳定律是什么？
+\end{quote}
+
+\section{Rotation system
+旋转系统}\label{rotation-system-ux65cbux8f6cux7cfbux7edf}
+
+\subsection*{(1) Special orthogonal group
+特殊正交群}\label{special-orthogonal-group-ux7279ux6b8aux6b63ux4ea4ux7fa4}
+
+The transformation between inertial frames \(S\) and \(S'\) (rotation by
+an angle \(\theta\)) is \[\left\{
+    \begin{array}{l}
+        \hat i = \hat i' \cos \theta - \hat j' \sin \theta, \\
+        \hat j = \hat i' \sin \theta + \hat j' \cos \theta.
+    \end{array}
+\right.\]
+
+Put it in matrix form, and we get: \[\begin{pmatrix}
+    \hat i \\
+    \hat j
+\end{pmatrix} =
+\begin{pmatrix}
+    \cos \theta & -\sin \theta \\
+    \sin \theta & \cos \theta
+\end{pmatrix}
+\begin{pmatrix}
+    \hat i' \\
+    \hat j'
+\end{pmatrix}.\]
+
+Let \[\mathbf R(\theta) = 
+\begin{pmatrix}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{pmatrix},\] and we know that \(\mathbf R\) has the following
+qualities:
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  \(\det \mathbf R = 1.\) This means that \(\mathbf R\) is a
+  \textbf{special orthogonal group (特殊正交群, SO)}, and one such group
+  in dimension \(n\) is denoted \(\operatorname{SO}(n)\). In this case,
+  \(\mathbf R\) is \(\operatorname{SO}(2)\) (二维特殊正交群).
+\item
+  \(\mathbf R^\mathrm{T}(\theta) = \mathbf R^{-1} (\theta).\) Here,
+  \(\mathrm T\) is short for \textbf{transpose (转置)}, and \(-1\) for
+  \textbf{inverse (逆)}.
+\end{enumerate}
+
+\[\mathbf R^\mathrm{T}(\theta) \mathbf R(\theta) = \mathbf R^{-1} (\theta) \mathbf R(\theta) = \mathbf I = \begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}.\]
+
+\begin{quote}
+作业：什么是流形？
+\end{quote}
+
+A group has four kinds of properties:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item Closure 封闭性
+\item Associative 结合性
+\item Unitarity 幺正性
+\item Inverse 有逆
+\end{enumerate}
+
+\begin{quote}
+作业：阿贝尔群 (Abel Group) 是什么？
+
+（满足可交换性的群，如旋转群
+\(\mathbf R(\theta_2) \mathbf R(\theta_1) = \mathbf R(\theta_1) \mathbf R(\theta_2).\)）
+\end{quote}
+
+\subsection*{(2) \(\operatorname U(1)\) Group ~
+\(\operatorname U(1)\)
+群}\label{operatorname-u1-group-operatorname-u1-ux7fa4}
+
+Here \(\operatorname U(1)\) stands for ``unitarity (酉,幺正)''.
+
+The form of the \(\operatorname U(1)\) group is
+\[\operatorname U(\theta) = \mathrm e^{\mathrm i \theta} = \cos \theta + \mathrm i \sin \theta. \quad (*)\]
+
+The conjugate (共轭) of \((*)\) is
+\[\operatorname U^*(\theta) = \mathrm e^{- \mathrm i \theta} = \cos \theta - \mathrm i \sin \theta.\]
+
+We can see that \(\operatorname{SO}(2)\) is an isomorphism (同构) of
+\(\operatorname U(\theta)\):
+\[\operatorname{SO}(2) \cong \operatorname U(\theta).\]
+
+\begin{quote}
+作业：什么是同构？
+
+群 \(G\) 与 \(G'\) 是同构的，如果存在一个双射 \(\varphi: G \to G'\)
+，满足 \(\varphi(xy) = \varphi(x)\varphi(y)\) ，其中 \(x, y \in G\)
+。双射 \(\varphi\) 称为群 \(G\) 和 \(G'\) 的一个同构，记为
+\(G \cong G'.\)
+\end{quote}
+
+\section[Acceleration in polar coordinates 极坐标加速度]{Acceleration decomposition in polar coordinates 极坐标下的加速度分解}\label{acceleration-decomposition-in-polar-coordinates-ux6781ux5750ux6807ux4e0bux7684ux52a0ux901fux5ea6ux5206ux89e3}
+
+The transformation between inertial frames \(S'\) (rotation by an angle
+\(\theta\)) and \(S\) is \[\left\{
+    \begin{array}{l}
+        \hat i' = \cos \theta \hat i + \sin \theta \hat j, \\
+        \hat j' = - \sin \theta \hat i + \cos \theta \hat j.
+    \end{array}
+\right.\]
+
+Take the derivative of the equations above and we get \[\left\{
+    \begin{array}{l}
+        \dfrac{\mathrm d \hat i'}{\mathrm d t} = (- \sin \theta \hat i + \cos \theta \hat j) \dot \theta = \dot \theta \hat j', \\
+        \dfrac{\mathrm d \hat j'}{\mathrm d t} = (- \cos \theta \hat i - \sin \theta \hat j) \dot \theta = - \dot \theta \hat i'.
+    \end{array}
+\right.\]
+
+Thus the radius vector is \[\boldsymbol r = r \hat i';\]
+
+The velocity is
+\[\boldsymbol v' = \dfrac{\mathrm d \boldsymbol r}{\mathrm dt} = \dfrac{\mathrm dr}{\mathrm dt} \hat i' + r \dfrac{\mathrm d \hat i'}{\mathrm dt} = \dfrac{\mathrm dr}{\mathrm dt} \hat i' + r \dot \theta \hat j' = v_r \hat i' + v_\theta \hat j';\]
+
+The acceleration is \begin{align*}
+    \boldsymbol a & = \dfrac{\mathrm d \boldsymbol v}{\mathrm dt} = \dfrac{\mathrm d}{\mathrm dt} \left( \dfrac{\mathrm dr}{\mathrm dt} \hat i' + r \dot \theta \hat j' \right) \\
+    & = \dfrac{\mathrm d^2 r}{\mathrm dt^2} \hat i' + \dfrac{\mathrm dr}{\mathrm dt} \dot \theta \hat j' + \dfrac{\mathrm dr}{\mathrm dt} \dot \theta \hat j' +  r \ddot \theta \hat j' +  r \dot \theta (- \dot \theta \hat i') \\
+    & = (\ddot r - r \dot \theta^2) \hat i' + (r \ddot  \theta + 2 \dot r \dot \theta) \hat j'.
+\end{align*}
+
+\emph{整理者附：这个推导好像跟科氏加速度没有半毛钱关系啊\ldots\ldots{}}
+
+\emph{注：赵老师上课说的所谓``科氏加速度''指的是
+\(2 \dot r \dot \theta \hat j'\) 一项}
+
+\section{Transport theorem in a rotation system
+旋转系的输运定理}\label{transport-theorem-in-a-rotation-system-ux65cbux8f6cux7cfbux7684ux8f93ux8fd0ux5b9aux7406}
+
+\subsection*{(1) Derivation 推导}\label{derivation-ux63a8ux5bfc-1}
+
+In a rotation system, we have the base factors \(\hat i'\) and
+\(\hat j'\), we have
+\[\dfrac{\mathrm d \hat r}{\mathrm dt} = \boldsymbol \omega \times \hat r,\]
+where \(\boldsymbol \omega = (0, 0, \omega),\) and
+\(\hat r = (\hat i', \hat j', \hat k')\).
+
+Take the derivatives of \(\hat i'\) and \(\hat j'\), and we acquire
+\[\dfrac{\mathrm d \hat i'}{\mathrm dt} = 
+    \begin{vmatrix}
+        \hat i' & \hat j' & \hat k' \\
+        0 & 0 & \omega \\
+        1 & 0 & 0
+    \end{vmatrix}
+= \omega \hat j';\]
+\[\dfrac{\mathrm d \hat j'}{\mathrm dt} = \begin{vmatrix}
+\hat i' & \hat j' & \hat k' \\
+0 & 0 & \omega \\
+0 & 1 & 0
+\end{vmatrix}
+= - \omega \hat i'.\]
+
+Let \(\boldsymbol f = f_x \hat i' + f_y \hat j' + f_z \hat k'\), and
+\begin{align*}
+    \dfrac{\mathrm d \boldsymbol f}{\mathrm dt} & = \left( \dfrac{\mathrm df_x}{\mathrm dt} \right)_r \hat i' + \left( \dfrac{\mathrm df_y}{\mathrm dt} \right)_r \hat j' + \left( \dfrac{\mathrm df_z}{\mathrm dt} \right)_r \hat k' + f_x \dfrac{\mathrm d \hat i'}{\mathrm dt} + f_y \dfrac{\mathrm d \hat j'}{\mathrm dt} + f_z \dfrac{\mathrm d \hat k'}{\mathrm dt} \\
+    & = \left( \dfrac{\mathrm d \boldsymbol f}{\mathrm dt} \right)_r + f_x \boldsymbol \omega \times \hat i' + f_y \boldsymbol \omega \times \hat j' + f_z \boldsymbol \omega \times \hat k' \\
+    & = \left[ \left( \dfrac{\mathrm d}{\mathrm dt}\right)_r + \boldsymbol \omega \times \right] \boldsymbol f.
+\end{align*}
+
+Let \(\boldsymbol f = \boldsymbol r\), and we get
+\[\boldsymbol v = \dfrac{\mathrm d \boldsymbol r}{\mathrm dt} = \left( \dfrac{\mathrm d \boldsymbol r}{\mathrm dt}\right)_r + \boldsymbol \omega;\]
+\begin{align*}
+    \boldsymbol a & = \dfrac{\mathrm d \boldsymbol v}{\mathrm dt} \\
+    & = \left[ \left( \dfrac{\mathrm d}{\mathrm dt}\right)_r + \boldsymbol \omega \times \right] \left[ \left( \dfrac{\mathrm d \boldsymbol r}{\mathrm dt}\right)_r + \boldsymbol \omega \times \boldsymbol r \right] \\
+    & = \left( \dfrac{\mathrm d^2 \boldsymbol r}{\mathrm dt^2}\right)_r + \left( \dfrac{\mathrm d \boldsymbol \omega}{\mathrm dt}\right)_r \times \boldsymbol r + 2 \boldsymbol \omega \times \left( \dfrac{\mathrm d \boldsymbol r}{\mathrm dt}\right)_r + \boldsymbol \omega \times (\boldsymbol \omega \times \boldsymbol r).
+\end{align*}
+
+\subsection*{(2) Example: Euler's equations in rigid body dynamics
+刚体运动的欧拉方程}\label{example-eulers-equations-in-rigid-body-dynamics-ux521aux4f53ux8fd0ux52a8ux7684ux6b27ux62c9ux65b9ux7a0b}
+
+Basically, if we have the angular momentum \(\boldsymbol L\), angular
+velocity \(\boldsymbol \omega\) and moment of inertia tensor (惯性张量)
+\(\mathbf I\), we will have
+\[\boldsymbol L = \mathbf I \cdot \boldsymbol \omega.\]
+
+According to the Angular Momentum Theorem, we have
+\[\dfrac{\mathrm d \boldsymbol L}{\mathrm dt} = \boldsymbol M,\] where
+\(\boldsymbol M\) is the external torque (外力矩). From this, we can get
+\[\left[ \dfrac{\mathrm d (\mathbf I \boldsymbol \omega)}{\mathrm dt}\right]_r + \boldsymbol \omega \times (\mathbf I \boldsymbol \omega) = \boldsymbol M.\]
+
+Because \(\mathbf I\) is a constant, we have
+\[\mathbf I \left( \dfrac{\mathrm d \boldsymbol \omega}{\mathrm dt} \right)_r + \begin{vmatrix}
+    \hat i & \hat j & \hat k \\
+    \omega_1 & \omega_2 & \omega_3 \\
+    \mathrm I_{11} \omega_1 & \mathrm I_{22} \omega_2 & \mathrm I_{33} \omega_3 \\
+\end{vmatrix} =\begin{pmatrix}
+    M_1 \\ M_2 \\ M_3
+\end{pmatrix}.\]
+
+In orthogonal principal axes of inertia coordinates
+(惯性坐标的正交主轴), the equations become \begin{align*}
+    \mathrm I_{11} \dfrac{\mathrm d \boldsymbol \omega_1}{\mathrm dt} + (\mathrm I_{33} - \mathrm I_{22}) \omega_2 \omega_3 & = M_1; \\
+    \mathrm I_{22} \dfrac{\mathrm d \boldsymbol \omega_2}{\mathrm dt} + (\mathrm I_{11} - \mathrm I_{33}) \omega_1 \omega_3 & = M_2; \\
+    \mathrm I_{33} \dfrac{\mathrm d \boldsymbol \omega_3}{\mathrm dt} + (\mathrm I_{22} - \mathrm I_{11}) \omega_1 \omega_2 & = M_3.
+\end{align*}

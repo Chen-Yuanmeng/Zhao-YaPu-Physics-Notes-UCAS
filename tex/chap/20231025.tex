@@ -1,0 +1,110 @@
+\chapter{2023/10/25}\label{20231025}
+
+\section{Rigid body rotation with constant angular
+velocity \(\boldsymbol \omega_0\)
+以恒角速度\(\boldsymbol \omega_0\)转动的刚体}\label{rigid-body-rotation-with-constant-angular-velocity-boldsymbol-omega_0-ux4ee5ux6052ux89d2ux901fux5ea6boldsymbol-omega_0ux8f6cux52a8ux7684ux521aux4f53}
+
+\[\nabla \times \left( \boldsymbol \omega_0 \times \boldsymbol r\right) = 2 \omega_0\]
+
+\section{Field theory 场论}\label{field-theory-ux573aux8bba}
+
+\[\boldsymbol r = x \hat i + y \hat j + z \hat k\]
+
+\[r = \sqrt{x^2 + y^2 + z^2}\]
+
+Common conclusions in field theory:
+
+\begin{itemize}
+\tightlist{}
+\item
+  \(\nabla \cdot \boldsymbol r = 3\)
+\item
+  \(\nabla \times \boldsymbol r = \boldsymbol 0\)
+\item
+  \(\nabla r = \hat{\boldsymbol r}\)
+\item
+  \(\nabla^2 r = \dfrac{2}{r}\)
+\item
+  \(\nabla \boldsymbol r = \mathbf I\)
+\end{itemize}
+
+\section[Deriving Bernoulli's principle 推导伯努利原理]{From Navier-Stokes equations to Bernoulli's principle
+从纳维-斯托克斯方程推导伯努利原理}\label{from-navier-stokes-equations-to-bernoullis-principle-ux4eceux7eb3ux7ef4-ux65afux6258ux514bux65afux65b9ux7a0bux63a8ux5bfcux4f2fux52aaux5229ux539fux7406}
+
+The material derivative (物质导数) of \(\boldsymbol v\) is shown as
+follows:
+
+\[\boldsymbol a = {\mathrm D \boldsymbol v \over \mathrm Dt} \equiv \underbrace{\partial \boldsymbol v \over \partial t}_\text{Local/Euler acceleration} + \underset{\text{平流加速度 (非线性)}}{\underbrace{\left(\boldsymbol v \cdot \nabla \right) \boldsymbol v}_\text{advective acceleration}}.\]
+
+Euler, 1750: infinitesimal 无穷小量
+
+Why does this form occur?
+
+Suppose we have a macroscopic tensor field (宏观张量场)
+\(T = T(t, \boldsymbol r(t))\) with the sense that it depends only on
+position and time coordinates:
+\[{\mathrm dT \over \mathrm dt} = {\partial T \over \partial t} + {\partial T \over \partial \boldsymbol r} {\mathrm d \boldsymbol r \over \mathrm dt} = {\partial T \over \partial t} + \boldsymbol v {\partial T \over \partial \boldsymbol r} = \left({\partial \over \partial t} + \boldsymbol v \cdot {\partial \over \partial \boldsymbol r} \right) T = \left({\partial \over \partial t} + \boldsymbol v \cdot \nabla \right) T.\]
+
+Using this, we can get: If
+\(\boldsymbol v = \boldsymbol v(\boldsymbol r(t), t)\), then
+\[\boldsymbol a = {\partial \boldsymbol v \over \partial t} + (\boldsymbol v \cdot \nabla) \boldsymbol v.\]
+
+From the Navier-Stokes equations, we can get:
+\[\boldsymbol a = - {1 \over \rho} \nabla p + \nu \nabla^2 \boldsymbol v + \boldsymbol g,\]
+which become the Euler equations (fluid dynamics) when \(\nu = 0.\)
+
+By using lamb vector
+\[\left(\nabla \times \boldsymbol v \right) \times \boldsymbol v = (\boldsymbol v \cdot \nabla) \boldsymbol v - \nabla \left( {1 \over 2} v^2 \right),\]
+we can get
+\[{\partial \boldsymbol v \over \partial t} + \left(\nabla \times \boldsymbol v \right) \times \boldsymbol v + \nabla \left( {1 \over 2} v^2 \right) = -{1 \over \rho} \nabla p + \mu \nabla^2 \boldsymbol v + \boldsymbol g.\]
+
+Under the following conditions:
+
+\begin{itemize}
+\tightlist{}
+\item
+  The fluid flows in steady state (定常流动):
+  \(\dfrac{\partial \boldsymbol v}{\partial t} = 0\)
+\item
+  Inviscid fluid (无黏液体): \(\nu = 0\)
+\item
+  Under conservative force field \(\boldsymbol g = - \nabla (gh)\)
+\item
+  The fluid is incompressible (液体不可压缩)
+\end{itemize}
+
+We can get:
+\[\left(\nabla \times \boldsymbol v \right) \times \boldsymbol v + \nabla \left( {1 \over 2} v^2 \right) = - \nabla \left({p \over \rho} \right) - \nabla (gh)\]
+\[\left(\nabla \times \boldsymbol v \right) \times \boldsymbol v + \nabla \left({p \over \rho} + {1 \over 2} v^2 + gh \right) = \boldsymbol 0\]
+\[{\boldsymbol v \over |\boldsymbol v|} \cdot \left[ \left(\nabla \times \boldsymbol v \right) \times \boldsymbol v + \nabla \left({p \over \rho} + {1 \over 2} v^2 + gh \right) \right] = 0\]
+\[{\boldsymbol v \over |\boldsymbol v|} \cdot \left[ \left(\nabla \times \boldsymbol v \right) \times \boldsymbol v \right] + {\boldsymbol v \over |\boldsymbol v|} \cdot \nabla \left({p \over \rho} + {1 \over 2} v^2 + gh \right) = 0\]
+
+Clearly,
+\[{\boldsymbol v \over |\boldsymbol v|} \cdot \left[ \left(\nabla \times \boldsymbol v \right) \times \boldsymbol v \right] = 0,\]
+because
+\(\left(\nabla \times \boldsymbol v \right) \perp \boldsymbol v.\)
+
+Here
+\(\displaystyle {\boldsymbol v \over |\boldsymbol v|} \cdot \nabla\) is
+a directional derivative (方向导数).
+
+Integral along the streamline (沿流线积分), and we obtain
+\[{p \over \rho} + {1 \over 2} v^2 + gh = \mathrm{const},\] which is
+called the \textbf{Bernoulli's principle (伯努利原理)}.
+
+Its other forms include: 
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Form} & \textbf{Name} \\
+        \hline
+        $\displaystyle \frac{p}{\rho} + \frac{1}{2} v^2 + gh = \mathrm{const}$ & Energy form (per unit mass) \\[1.5ex]
+        \hline
+        $\displaystyle p + \frac{1}{2} \rho v^2 + \rho g h = \mathrm{const}$ & Pressure form \\[1.5ex]
+        \hline
+        $\displaystyle \frac{p}{\rho g} + \frac{v^2}{2g} + h = \mathrm{const}$ & Head form (used in Hydraulic engineering) \\[1.5ex]
+        \hline
+    \end{tabular}
+    \captionof{table}{Different forms of Bernoulli's principle}
+\end{center}

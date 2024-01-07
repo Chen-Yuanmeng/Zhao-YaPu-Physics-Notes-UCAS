@@ -1,0 +1,174 @@
+\chapter{2023/9/18}\label{20230918}
+
+\section{Heisenberg's Uncertainty Principle 海森堡不确定性原理}\label{heisenbergs-uncertainty-principle-ux6d77ux68eeux5821ux4e0dux786eux5b9aux6027ux539fux7406}
+
+\[\Delta x \cdot \Delta p_x \geq {\hbar \over 2}\] \[\Delta E \cdot \Delta t \geq {\hbar \over 2}\] \[\Delta \tau \cdot \Delta \theta \geq {\hbar \over 2}\]
+
+De Broglie proposed the concept of the matter wave in 1926: \[\left\{
+    \begin{array}{l}
+        \boldsymbol p = \hbar \boldsymbol k, \\
+        E=\hbar \omega.
+    \end{array}
+\right.\]
+
+Here, \([\hbar]\) is the dimension (量纲) of action (作用量) \(\displaystyle S=\int_{t_1}^{t_2}L\mathrm dt\), and the three conjugations above are called \textbf{action conjugation (作用量共轭)}.
+
+In it, \(\boldsymbol k\) is the \textbf{wave vector (波矢)}, and it reflects the direction in which the wave propagates (传播). \(k = \dfrac{2 \pi}{\lambda}\).
+
+These equations reflects \textbf{wave-particle duality (波粒二象性)}.
+
+There are two kinds of waves, \textbf{longitudinal wave (纵波)} and \textbf{transverse wave (横波)}.
+
+\section{The derivation of Schrödinger Equation 薛定谔方程的推导}\label{the-derivation-of-schruxf6dinger-equation-ux859bux5b9aux8c14ux65b9ux7a0bux7684ux63a8ux5bfc}
+
+\subsection*{(1) Wave function 波函数 \(\psi\)}\label{wave-function-ux6ce2ux51fdux6570-psi}
+
+We directly give the form of the wave function without proof: \[\psi = \mathrm e^{\mathrm i(\boldsymbol k \cdot \boldsymbol r - \omega t)} = \mathrm e^{\mathrm {i}(\boldsymbol p \cdot \boldsymbol r - E t) / \hbar}.\]
+
+Because the wave function is an indication of probability, it must exists that \[\iiint _{(V)} |\psi|^2 \mathrm d\tau=1.\]
+
+\subsection*{(2) The derivation of \(\hat p\) 推导动量算符 \(\hat p\)}\label{the-derivation-of-hat-p-ux63a8ux5bfcux52a8ux91cfux7b97ux7b26-hat-p}
+
+\[\nabla \psi = {\partial \psi \over \partial \boldsymbol r} = {\mathrm i \over \hbar}\boldsymbol p \psi\] \[\Rightarrow \boldsymbol p \psi = -\mathrm i \hbar \nabla \psi\] \[\Rightarrow \hat p = -\mathrm i \hbar \nabla.\]
+
+From this we can see that momentum is linked with space (动量与空间相联系), and consequently, the conservation of momentum (动量守恒) is related to spatial translation invariance (空间平移不变性).
+
+\subsection*{(3) The derivation of \(\hat E\) 推导能量算符 \(\hat E\)}\label{the-derivation-of-hat-e-ux63a8ux5bfcux80fdux91cfux7b97ux7b26-hat-e}
+
+\[{\partial \psi \over \partial t} = -{\mathrm i \over \hbar}E \psi\] \[\Rightarrow E \psi = \mathrm i \hbar {\partial \over \partial t} \psi\] \[\Rightarrow \hat E = \mathrm i \hbar {\partial \over \partial t}.\]
+
+From this we can see that energy is linked with time (能量与时间相联系), and consequently, the conservation of energy (能量守恒) is related to time translation invariance (时间平移不变性).
+
+\subsection*{(4) The derivation of Schrödinger Equation 薛定谔方程的推导}\label{the-derivation-of-schruxf6dinger-equation-ux859bux5b9aux8c14ux65b9ux7a0bux7684ux63a8ux5bfc-1}
+
+Originally, we know that \[H = E = {p^2 \over 2m} + U.\]
+
+Replace the quantities with operators, and we have \begin{align*}
+    \hat E & = {\hat p \cdot \hat p \over 2m} + \hat U, \\
+    \mathrm i \hbar {\partial \over \partial t} & = {1 \over 2m} (-\mathrm i \hbar)^2 \nabla^2 + \hat U, \\
+    \mathrm i \hbar {\partial \over \partial t} & = -{\hbar^2 \over 2m} \nabla^2 + \hat U.
+\end{align*}
+
+Apply the equation above to \(\psi\), and we have \[\mathrm i \hbar {\partial \psi \over \partial t} = -{\hbar^2 \over 2m} \nabla^2 \psi + \hat U \psi, \] which is the Schrödinger Equation.
+
+Sometimes we also write it in the form \(E | \psi \rangle =H| \psi \rangle\).
+
+\begin{quote}
+作业：重新推导一遍薛定谔方程
+\end{quote}
+
+\section{Principle of Superposition 叠加原理}\label{principle-of-superposition-ux53e0ux52a0ux539fux7406}
+
+Proposed by Daniel Bernoulli (son of John Bernoulli)
+
+The Great Debate for String, 1730\textasciitilde1780: Daniel Bernoulli, D'Alembert, Lagrange, Euler
+
+D'Alembert, in 1747, proposed \(\left(\dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2}- \nabla^2 \right) \boldsymbol u= \boldsymbol 0\), or \(\Box \ \boldsymbol u = \boldsymbol 0\), or \(\partial ^\mu \partial _\mu \boldsymbol u = g^{\mu\nu}\partial_\nu \partial _\mu \boldsymbol u = \boldsymbol 0\).
+
+John Bernoulli proposed \textbf{the discretization of string vibration (弦振动的离散化)}, seeing the string as a string of beads (珠子).
+
+\emph{赵爹评价为从-1到0的创举，并寄语我们：趁年轻干一票大的！}
+
+\begin{quote}
+作业：推导弦振动方程（可用牛顿力学、理论力学方法）
+\end{quote}
+
+\section{Something about \ldots{} Well I don't know what it is about}\label{something-about-well-i-dont-know-what-it-is-about}
+
+\begin{center}
+    \begin{tabular}{| c | c | c |}
+        \hline
+        \textbf{Velocity/Scale} & \textbf{Small Scale} & \textbf{Large Scale} \\
+        \hline
+        \textbf{High speed} & $(i \partial \!\!\!/ - m) \psi = 0$ & Relativity\\
+        & & (Lorentz Transform) \\
+        \hline
+        \textbf{Low speed} & Quantum Mechanics & Classical Mechanics\\
+        & $\displaystyle \mathrm i \hbar {\partial \psi \over \partial t} = -{\hbar^2 \over 2m} \nabla^2 \psi + \hat U \psi$ & (Galilean Transform) \\[1em]
+        \hline
+    \end{tabular}
+    \captionof{table}{Velocity and Scale}
+\end{center}
+
+% \end{table}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Lorentz Transform 洛伦兹变换
+
+  \[\left\{ 
+        \begin{array}{l}
+            x'=\gamma (x-vt), \\
+            y'=y, \\
+            z'=z,\\
+            t'=\gamma (t-\dfrac{vx}{c^2}),
+        \end{array}
+    \right.\] in which the Lorentz factor (洛伦兹因子) is
+  \[\gamma=\dfrac{1}{\sqrt{1-\dfrac{v^2}{c^2}}}.\]
+\item
+  Galilean Transform 伽利略变换
+
+  \[\left\{
+        \begin{array}{l}
+            x'=x-vt \\
+            y'=y \\
+            z'=z\\
+            t'=t
+        \end{array}
+    \right.\]
+\end{itemize}
+
+If \(\dfrac{v}{c} \ll 1\), \(\gamma \approx 1\), and Lorentz Transform will be deducted to Galilean Transform.
+
+Poincaré Group (庞加莱群) \textgreater{} Lorentz Group (洛伦兹群) \textgreater{} Galilean Group (伽利略群)
+
+\section{Four fundamental forces 4种基本力}\label{four-fundamental-forces-4ux79cdux57faux672cux529b}
+
+\emph{Dyson告诉我们，选择终极性课题，不要向火坑里面跳；
+Einstein告诉我们，一个理论，要只发表一篇论文；
+应该反思现在学术界\_\_\_\_\_\_\_\_、\_\_\_\_\_\_\_\_的行为和作风。}
+
+\subsection*{(1) Universal gravity, 1687 万有引力}\label{universal-gravity-1687-ux4e07ux6709ux5f15ux529b}
+
+\emph{人间：车行马走，柴米油盐}
+
+\emph{牛顿力学由天上产生，是一种哲学问题}
+
+\emph{1969 美国宇航员William Anders：``牛顿在驾驶飞船'' VS 某某某
+``星球飘在那里''}
+
+The basic unit of gravity, graviton (引力子), has not yet been found.
+
+\emph{牛津大学哲学系把牛顿划分为instrumentalist (工具主义者)，这不是一个贬义词，也是我们现在做研究的真实写照。}
+
+\[\boldsymbol F= m \ddot{\boldsymbol{r}}.\]
+
+Gravity $\rightarrow$ curvature; force $\rightarrow$ geometry
+
+\[G_{\mu\nu} = {8 \pi G \over c^4} T_{\mu\nu}\]
+
+\begin{quote}
+Matter tells space how to curve. Curvature tells matter how to move.
+\end{quote}
+
+\subsection*{(2) Electromagnetic force, 1865 电磁相互作用 (Maxwell)}\label{electromagnetic-force-1865-ux7535ux78c1ux76f8ux4e92ux4f5cux7528-maxwell}
+
+Force carriers: photons (光子)
+
+\subsection*{(3) Strong interaction, 1973 强相互作用}\label{strong-interaction-1973-ux5f3aux76f8ux4e92ux4f5cux7528}
+
+Fine structure constant (精细结构常数):
+\[\alpha = {e^2 \over 4 \pi \varepsilon_0 \hbar c} \approx {1 \over 137.03599976}.\]
+
+\subsection*{(4) Weak interaction 弱相互作用}\label{weak-interaction-ux5f31ux76f8ux4e92ux4f5cux7528}
+
+Pauli
+
+Standard Model (SM, 标准模型): can conclude electromagnetic force, strong interaction and weak interaction.
+
+\subsection*{(5) A fifth force? 第五种基本力？}\label{a-fifth-force-ux7b2cux4e94ux79cdux57faux672cux529b}
+
+Dark energy, chameleons (变色龙), 非标准模型
+
+Fermilab: g-2 model (about \(\mu\) particles)

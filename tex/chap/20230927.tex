@@ -1,0 +1,159 @@
+\chapter{2023/9/27}\label{20230927}
+
+\section{Quantum operators
+量子算符}\label{quantum-operators-ux91cfux5b50ux7b97ux7b26}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Momentum: \[\hat {\boldsymbol p} = - \mathrm i \hbar \nabla \]
+\item
+  Energy: \[\hat E = \mathrm i \hbar \dfrac{\partial}{\partial t} \]
+\item
+  Angular momentum: \begin{align*}
+    \hat {\boldsymbol L} & = \boldsymbol r \times \hat {\boldsymbol p} \\ 
+    & = (x \hat i + y \hat j + z \hat k) \times(- \mathrm i \hbar \nabla) \\
+    & = \mathrm i \hbar\left[\left(z {\partial \over \partial y} - y {\partial \over \partial z} \right)\hat i + \left(x {\partial \over \partial z} - z {\partial \over \partial x} \right) \hat j + \left(y {\partial \over \partial x} - x {\partial \over \partial y} \right) \hat k \right]
+    \end{align*}
+\end{itemize}
+
+\section{Vectors: flux and circulation
+矢量：通量和环量}\label{vectors-flux-and-circulation-ux77e2ux91cfux901aux91cfux548cux73afux91cf}
+
+\subsection*{(1) Definition 定义}\label{definition-ux5b9aux4e49}
+
+\begin{itemize}
+\tightlist{}
+\item
+  The flux (通量) of \(\boldsymbol A\) is defined as
+  \[ \oiint_{\partial V} \boldsymbol A \cdot \mathrm d \boldsymbol S\]
+  Gauss's divergence theorem (高斯散度定理):
+  \[\iiint (\nabla \cdot \boldsymbol F) \mathrm dV = \oiint_{\partial V} \boldsymbol F \cdot \mathrm d \boldsymbol S\]
+\item
+  The circulation of \(\boldsymbol A\) is defined as
+  \[\oint \boldsymbol A \cdot \mathrm d \boldsymbol l\] Stokes' theorem (斯托克斯公式):
+  \[\oiint_{\partial V} (\nabla \times \boldsymbol A) \cdot \mathrm d \boldsymbol S = \oint \boldsymbol A \cdot \mathrm d \boldsymbol l.\]
+\end{itemize}
+
+\subsection*{(2) 3 equivalent conditions a conservative force field satisfies 保守立场满足的三个等价条件}\label{equivalent-conditions-a-conservative-force-field-satisfies-ux4fddux5b88ux7acbux573aux6ee1ux8db3ux7684ux4e09ux4e2aux7b49ux4ef7ux6761ux4ef6}
+
+\begin{align*}
+    \nabla \times \boldsymbol f = \boldsymbol 0 \quad(1) \\
+    \oint \boldsymbol f \cdot \mathrm d \boldsymbol r = 0 \quad(2) \\
+    \boldsymbol f = - \nabla \varphi \quad(3)
+\end{align*}
+
+Proof of equivalency 证明等价性:
+
+\paragraph{\((1) \Rightarrow (2)\):}\label{rightarrow-2}
+
+\[\oint \boldsymbol f \cdot \mathrm d \boldsymbol r = \oiint_{\partial V} (\nabla \times \boldsymbol f) \cdot \mathrm d \boldsymbol S = 0\]
+
+\paragraph{\((2) \Rightarrow (3)\):}\label{rightarrow-3}
+
+\[\mathrm dW = \boldsymbol f \cdot \mathrm d \boldsymbol r + \mathrm dU = 0\] \[\boldsymbol f \cdot \mathrm d \boldsymbol r = - \mathrm dU(\boldsymbol r) \] \[\boldsymbol f \cdot \mathrm d \boldsymbol r = - {\mathrm dU \over \mathrm d \boldsymbol r } \cdot \mathrm d \boldsymbol r \] \[\boldsymbol f = - {\mathrm dU \over \mathrm d \boldsymbol r } = - \nabla U \]
+
+\paragraph{\((3) \Rightarrow (1)\): It's obvious. We skipped it.}\label{rightarrow-1-its-obvious.-we-skipped-it.}
+
+\subsection*{(3) Examples:}\label{examples}
+
+\paragraph{(1) In electromagnetics}\label{in-electromagnetics}
+
+\[\boldsymbol J = \rho \boldsymbol v_d\] \[{\partial \rho \over \partial t} + \nabla \cdot \boldsymbol J = {\partial \rho \over \partial t}+\nabla \cdot (\rho \boldsymbol v_d) = 0\] In this, \(\nabla \cdot \boldsymbol J\) is a flux.
+
+\paragraph{(2) Diffusion}\label{diffusion}
+
+\[{\partial c \over \partial t} + \nabla \cdot \boldsymbol J = 0\] \[\boldsymbol J = - D \nabla c \text{\ \ (Fick's\  first\ law\ 菲克第一定律)}\] \[{\partial c \over \partial t} = - \nabla \cdot \boldsymbol J = D \nabla^2 c.\]
+
+\section{Dimension homogeneity principle 量纲一致性原理}\label{dimension-homogeneity-principle-ux91cfux7eb2ux4e00ux81f4ux6027ux539fux7406}
+
+In mechanics, there are only three dimensions involved: \(\mathrm{M}\) (mass), \(\mathrm{L}\) (length), and \(\mathrm{T}\) (time).
+
+Dimension homogeneity principle includes three aspects: \begin{itemize}
+\tightlist{}
+\item Fundamental dimension 物理量
+\item Rank 阶
+\item Covariant and contravariant 协变和逆变
+\end{itemize}
+
+For example:
+
+\emph{下面的大家自己推导量纲分析，5秒钟推不出来就是脑子有问题 (bushi)}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Bernoulli's principle 伯努利原理
+  \[p + {1 \over 2} \rho v^2 + \rho gh = \mathrm{const}\]
+\item
+  Navier-Stokes equations 纳维-斯托克斯方程
+  \[ {\partial \boldsymbol v \over \partial t} +(\boldsymbol v \cdot \nabla) \boldsymbol v = - {1 \over \rho} \nabla p + \mu \nabla^2 \boldsymbol v + \boldsymbol g\]
+\item
+  Fourier's law of thermal conduction 傅里叶热传导定律
+  \[\boldsymbol J = -k \nabla T\] \[\rho c {\partial T \over \partial t} + \nabla \cdot \boldsymbol J=0 \ \  (*)\]
+\end{itemize}
+
+\begin{quote}
+作业：推导\((*)\)方程.
+\end{quote}
+
+\begin{quote}
+作业：将欧姆定律写成通量形式.
+\end{quote}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Gravitational wave 引力波: \[\Box h_{\mu\nu} = \mathbf{0}.\]
+\end{itemize}
+
+\emph{In 1905, Poincaré deducted that the velocity of the gravitational wave is the speed of light.}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Einstein field equations 爱因斯坦引力场方程
+  \[R_{\mu\nu}+ {1 \over 2} g_{\mu\nu}R = {8 \pi G \over c^4} T_{\mu\nu}.\]
+\item
+  Riemann metric tensor 黎曼度规张量
+  \[g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu},\] where \(g_{\mu\nu}\)
+  stands for the curve part, \(\eta_{\mu\nu}\) for the flat part, and
+  \(g_{\mu\nu}\) for the fluctuation (挠动) part.
+\end{itemize}
+
+\section{Black holes}\label{black-holes}
+
+Black holes have three conservatives: mass, charge and angular momentum.
+
+% \begin{longtable}[]{@{}ll@{}}
+% \toprule\noalign{}
+% Black holes & Dump holes (哑洞) \\
+% \midrule\noalign{}
+% \endhead
+% \bottomrule\noalign{}
+% \endlastfoot
+% event horizon (事件视界) & acoustic horizon (声学界限) \\
+% \end{longtable}
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Black holes} & \textbf{Dump holes (哑洞)} \\
+        \hline
+        event horizon (事件视界) & acoustic horizon (声学界限) \\
+        \hline
+    \end{tabular}
+    \captionof{table}{Comparison of Black Holes and Dump Holes}
+\end{center}
+
+\begin{quote}
+作业：哑洞是什么？
+\end{quote}
+
+Using dialectics (辩证法), we can know that things called ``white
+holes'' should exist, and black and white holes are connected by
+wormholes. There may exist parallel universes.
+
+\begin{quote}
+作业：什么是平行宇宙？
+\end{quote}

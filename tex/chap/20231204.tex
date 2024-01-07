@@ -1,0 +1,262 @@
+\chapter{2023/12/04}\label{20231204}
+
+\section{Deduction of the operators of momentum, energy and angular
+momentum
+动量、能量、角动量算符的推导}\label{deduction-of-the-operators-of-momentum-energy-and-angular-momentum-ux52a8ux91cfux80fdux91cfux89d2ux52a8ux91cfux7b97ux7b26ux7684ux63a8ux5bfc}
+
+\begin{itemize}
+\tightlist{}
+\item
+  The wave function 波函数
+  \[\psi = \mathrm e^{\mathrm i(\boldsymbol k \cdot \boldsymbol r - \omega t)} = \mathrm e^{\mathrm {i \over \hbar}(\boldsymbol p \cdot \boldsymbol r - E t)}\]
+
+  Because the wave function is an indication of probability, it must
+  exists that \[\iiint _{(V)} |\psi|^2 \mathrm d\tau=1.\]
+\item
+  The derivation of \(\hat p\) 推导动量算符 \(\hat p\)
+
+  \[\nabla \psi = {\partial \psi \over \partial \boldsymbol r} = {\mathrm i \over \hbar}\boldsymbol p \psi\] \[\Rightarrow \boldsymbol p \psi = -\mathrm i \hbar \nabla \psi\] \[\Rightarrow \hat p = -\mathrm i \hbar \nabla\]
+
+  From this we can see that momentum is linked with space
+  (动量与空间相联系), and consequently, the conservation of momentum
+  (动量守恒) is related to spatial translation invariance
+  (空间平移不变性).
+\item
+  The derivation of \(\hat E\) 推导能量算符 \(\hat E\)
+
+  \[{\partial \psi \over \partial t} = -{\mathrm i \over \hbar}E \psi\] \[\Rightarrow E \psi = \mathrm i \hbar {\partial \psi \over \partial t}\] \[\Rightarrow \hat E = \mathrm i \hbar {\partial \over \partial t}\]
+
+  From this we can see that energy is linked with time
+  (能量与时间相联系), and consequently, the conservation of energy
+  (能量守恒) is related to time translation invariance (时间平移不变性).
+\item
+  The derivation of \(\hat{\boldsymbol{L}}\)
+  推导角动量算符\(\hat{\boldsymbol{L}}\)
+
+  From \(\hat p = -\mathrm i \hbar \nabla\), we know that
+  \[\hat{\boldsymbol{L}} = \hat{\boldsymbol{r}} \times \hat{\boldsymbol{p}} = \hat{\boldsymbol{r}} \times \left( -\mathrm i \hbar \nabla \right) = -\mathrm i \hbar \hat{\boldsymbol{r}} \times \nabla.\]
+
+  From this we can see that angular momentum is linked with space
+  (角动量与时空相联系), and consequently, the conservation of angular
+  momentum (角动量守恒) is related to spacial rotation invariance
+  (时间平移不变性).
+\end{itemize}
+
+\section{Noether's theorem (1918)
+诺特定理}\label{noethers-theorem-1918-ux8bfaux7279ux5b9aux7406}
+
+by Emmy Noether (1882\textasciitilde1935)
+
+\subsection*{(0) Introduction 引入}\label{introduction-ux5f15ux5165}
+
+\emph{Freeman Dyson: Birds and Frogs (2009)}
+
+\begin{itemize}
+\tightlist{}
+\item
+  There are two kinds of scientists:
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    \textbf{Birds}: they fly high, see the landscape and have delight in
+    unifying
+  \item
+    \textbf{Frogs}: they reside in the mud and see the details
+  \end{itemize}
+\item
+  Four jokes by nature:
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    the square root of minus one that the physicist Erwin Schrödinger
+    put into his wave equation when he invented wave mechanics
+    被放入薛定谔波函数的-1的平方根
+  \item
+    the precise linearity of quantum mechanics, the fact that the
+    possible states of any physical object form a linear space
+    量子力学的精确线性，即物理对象的所有可能状态构成线性空间
+  \item
+    the existence of quasi-crystals 拟晶体的存在
+  \item
+    a similarity in behavior between quasi-crystals and the zeros of the
+    Riemann Zeta function 拟晶体和黎曼 \(\zeta\) 函数在行为上的相似性
+  \end{itemize}
+\end{itemize}
+
+\subsection*{(1) Contents 内容}\label{contents-ux5185ux5bb9-1}
+
+\textbf{Every differentiable symmetry of the action of a physical system
+with conservative forces has a corresponding conservation law.}
+
+每个连续对称性都有着相应的守恒定律。
+
+\subsection*{(2) Examples of Noether's theorem
+诺特定理的例证}\label{examples-of-noethers-theorem-ux8bfaux7279ux5b9aux7406ux7684ux4f8bux8bc1}
+
+We will focus on five pairs of conserved physical quantities and
+symmetry:
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Physical quantities (物理量)} & \textbf{Corresponding symmetry (对应的对称性)} \\
+        \hline
+        Momentum (动量) & Spatial translation invariance (空间平移不变性) \\
+        \hline
+        Angular momentum (角动量) & Spatial rotation invariance (空间旋转不变性) \\
+        \hline
+        Energy (能量) & Time translation invariance (时间平移不变性) \\
+        \hline
+        Charge (电荷) & Gauge invariance (规范不变性) \\
+        \hline
+        Mass-Energy (质-能守恒) & Time translation invariance (时间平移不变性) \\
+        \hline
+    \end{tabular}
+    \captionof{table}{Correspondence between Physical Quantities and Symmetry}
+\end{center}
+
+\paragraph{i. Momentum (动量) \(\Leftrightarrow\) Spatial
+translation invariance
+(空间平移不变性)}\label{momentum-ux52a8ux91cf-leftrightarrow-spatial-translation-invariance-ux7a7aux95f4ux5e73ux79fbux4e0dux53d8ux6027}
+
+In a closed system, suppose we have a parallel infinitesimal
+displacement (平行无穷小位移)
+\(\boldsymbol{\varepsilon} = \delta q_\alpha\) (constant), and then we
+know
+\[\delta L = \sum_{\alpha} \frac{\partial L}{\partial q_\alpha} \delta \boldsymbol{q}_\alpha = \boldsymbol{\varepsilon} \cdot \sum_{\alpha} \frac{\mathrm{d}}{\mathrm{d}t} \frac{\partial L}{\partial q_\alpha} \delta \dot{\boldsymbol{q}}_\alpha = \boldsymbol{\varepsilon} \cdot \frac{\mathrm{d}}{\mathrm{d}t} \sum_{\alpha} p_\alpha = \boldsymbol{\varepsilon} \cdot \frac{\mathrm{d} \boldsymbol{p}}{\mathrm{d}t} = \boldsymbol{0}.\]
+
+Because \(\boldsymbol{\varepsilon} \neq \boldsymbol{0}\), we have
+\[\frac{\mathrm{d} \boldsymbol{p}}{\mathrm{d}t} = \boldsymbol{0},\]which
+means that \(\boldsymbol{p}\) is conserved.
+
+Through this, we have deducted momentum conservation from spatial
+translation invariance.
+
+\paragraph{ii. Angular Momentum (角动量)
+\(\Leftrightarrow\) Spatial rotation invariance (空间旋转不变性) /
+isotropy
+(各向同性)}\label{angular-momentum-ux89d2ux52a8ux91cf-leftrightarrow-spatial-rotation-invariance-ux7a7aux95f4ux65cbux8f6cux4e0dux53d8ux6027-isotropy-ux5404ux5411ux540cux6027}
+
+Suppose we have a infinitesimal rotation angle (无穷小旋转角)
+\(\delta \boldsymbol{\varphi}\) (constant), and then we know
+\[\delta \boldsymbol{r}_\alpha = \delta \boldsymbol{\varphi} \times \boldsymbol{r}_\alpha,\]
+and
+\[\delta \boldsymbol{v}_\alpha = \delta \dot{\boldsymbol{r}}_\alpha = \delta \boldsymbol{\varphi} \times \dot{\boldsymbol{r}}_\alpha.\]
+
+\begin{align*}
+    \delta L & = \sum_{\alpha} \left( \frac{\partial L}{\partial \boldsymbol{r}_\alpha} \cdot \delta \boldsymbol{r}_\alpha + \frac{\partial L}{\partial \dot{\boldsymbol{r}}_\alpha} \cdot \delta \dot{\boldsymbol{r}}_\alpha \right) \\
+    & = \sum_{\alpha} \dot{\boldsymbol{p}}_\alpha \cdot \left( \delta \boldsymbol{\varphi} \times \boldsymbol{r}_\alpha \right) + \sum_{\alpha} \boldsymbol{p}_\alpha \cdot \left( \delta \boldsymbol{\varphi} \times \dot{\boldsymbol{r}}_\alpha \right) & \quad (1)\\
+    & = \delta \boldsymbol{\varphi} \cdot \left[ \sum_{\alpha} \left( \dot{\boldsymbol{r}}_\alpha \times \boldsymbol{p}_\alpha + \boldsymbol{r}_\alpha \times \dot{\boldsymbol{p}}_\alpha \right) \right] & \quad (2)\\
+    & = \delta \boldsymbol{\varphi} \cdot \left[ \sum_{\alpha} \frac{\mathrm{d}}{\mathrm{d}t} (\boldsymbol{r}_\alpha \times \boldsymbol{p}_\alpha) \right] \\
+    & = \delta \boldsymbol{\varphi} \cdot \frac{\mathrm{d} \boldsymbol{M}}{\mathrm{d}t} \\
+    & = \boldsymbol{0}.
+\end{align*}
+
+Note: From \((1)\) to \((2)\), we used the equation
+\(\boldsymbol a \cdot (\boldsymbol b \times \boldsymbol c) = \boldsymbol c \cdot (\boldsymbol a \times \boldsymbol b) = \boldsymbol b \cdot (\boldsymbol c \times \boldsymbol a).\)
+
+Because \(\delta \boldsymbol{\varphi} \neq \boldsymbol{0}\), we have
+\[\frac{\mathrm{d} \boldsymbol{M}}{\mathrm{d}t} = 0,\] which means that
+\(\displaystyle \boldsymbol{M} = \sum_{\alpha} \boldsymbol{r}_\alpha \times \boldsymbol{p}_\alpha\)
+is conserved. This indicates spatial rotation invariance
+(空间旋转不变性).
+
+\paragraph{iii. Energy (能量) \(\Leftrightarrow\) Time
+translation invariance
+(时间平移不变性)}\label{energy-ux80fdux91cf-leftrightarrow-time-translation-invariance-ux65f6ux95f4ux5e73ux79fbux4e0dux53d8ux6027}
+
+Suppose there is a time-translation-invariant system, where
+\(L(q, \dot{q}, t) = L(q, \dot{q})\) doesn't depend on time \(t\)
+explicitly. Then we have \begin{align*}
+    \frac{\mathrm{d} L}{\mathrm{d}t} & = \sum_{\alpha} \left( \frac{\partial L}{\partial q_\alpha} \dot{q}_\alpha + \frac{\partial L}{\partial \dot q_\alpha} \ddot{q}_\alpha \right)  = \sum_{\alpha} \left( \frac{\mathrm{d}}{\mathrm{d}t} \frac{\partial L}{\partial \dot q_\alpha} \dot{q}_\alpha + \frac{\partial L}{\partial \dot q_\alpha} \ddot{q_\alpha} \right) = \frac{\mathrm{d}}{\mathrm{d}t} \sum_{\alpha} \left( \frac{\partial L}{\partial \dot q_\alpha} \dot{q}_\alpha \right) \\
+    & = \frac{\mathrm{d}}{\mathrm{d}t} \sum_{\alpha} \left( \frac{\partial T}{\partial \dot q_\alpha} \dot{q}_\alpha \right) = \frac{\mathrm{d}}{\mathrm{d}t} \sum_{\alpha} \left( m \dot{q}_\alpha \dot{q}_\alpha \right) = \frac{\mathrm{d}}{\mathrm{d}t} (2T).
+\end{align*}
+
+From this, we know that
+\[\frac{\mathrm{d} L}{\mathrm{d}t} = \frac{\mathrm{d} (2T)}{\mathrm{d}t},\]
+and
+\[\frac{\mathrm{d} (2T - L)}{\mathrm{d}t} = \frac{\mathrm{d} [2T - (T - V)]}{\mathrm{d}t} = \frac{\mathrm{d} (T + V)}{\mathrm{d}t} = \frac{\mathrm{d} E}{\mathrm{d}t} = 0.\]
+
+That is to say, energy \(E\) is conserved, and we have the energy
+conservation law.
+
+\paragraph{iv. Charge (电荷) \(\Leftrightarrow\) Gauge
+symmetry
+(规范对称性)}\label{charge-ux7535ux8377-leftrightarrow-gauge-symmetry-ux89c4ux8303ux5bf9ux79f0ux6027}
+
+\emph{Fusion: Education + Research}
+
+In 2022, \emph{Physical Review Letters} (PRL) published \emph{Machine Learning Hidden Symmetries} (\url{https://doi.org/10.1103/PhysRevLett.128.180201}).
+
+In \emph{More is different} (\url{https://doi.org/10.1126/science.177.4047.393}) by P. W. Anderson (1923-2020)*: ``It is only slightly overstating the case to say that physics is the study of symmetry.''
+
+\emph{译者注：赵爹上课没写only这个词，于是整句话意思完全不一样了（笑哭）}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Derivation of charge conservation 电荷守恒的导出
+
+  From the Maxwell's equations we know that
+  \[\nabla \cdot \boldsymbol E = \dfrac{\rho}{\varepsilon_0}\] and
+  \[\nabla \times \boldsymbol{B} = \mu_0 \left( \boldsymbol{j} + \varepsilon_0 \frac{\partial \boldsymbol{E}}{\partial t} \right).\]
+
+  The divergence of a curl is zero (旋度无散), and we have
+  \begin{align*}
+        \nabla \cdot \left( \nabla \times \boldsymbol{B} \right) & = \mu_0 \nabla \cdot \boldsymbol{j} + \mu_0 \varepsilon_0 \nabla \cdot \frac{\partial \boldsymbol{E}}{\partial t} \\
+        & = \mu_0 \left[ \nabla \cdot \boldsymbol{j} + \varepsilon_0 \frac{\partial \left( \nabla \cdot \boldsymbol{E} \right)}{\partial t} \right] \\
+        & = \mu_0 \left[ \nabla \cdot \boldsymbol{j} + \varepsilon_0 \frac{\partial}{\partial t} \left( \frac{\rho}{\varepsilon_0} \right) \right] \\
+        & = \mu_0 \left[ \nabla \cdot \boldsymbol{j} + \frac{\partial \rho}{\partial t} \right] \\
+        & = 0.
+    \end{align*}
+
+  Thus we have
+  \[\nabla \cdot \boldsymbol{j} + \frac{\partial \rho}{\partial t} = 0,\]
+  which is called \textbf{the charge density continuity equation
+  (电荷连续性方程).}
+
+  Written in covariant and contravariant (协变和逆变) form is
+  \[\partial_{\mu} J^{\mu} = 0.\]
+
+  Here,
+  \[\partial_{\mu} = \left( \frac{1}{c} \frac{\partial}{\partial t}, \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right),\]
+  and \[J^{\mu} = \left( c \rho, v_x \rho, v_y \rho, v_z \rho \right).\]
+\item
+  Gauge invariance 规范不变性
+
+  For this part, please refer to the notes on 2023/10/16.
+\item
+  One-dimensional manifold 一维流形 \(\operatorname U(1)\)
+
+  Here \(\operatorname U(1)\) stands for \textbf{unitarity 酉(或幺正)}.
+
+  \[\operatorname U(\theta) = \mathrm{e}^{\mathrm{i} \theta} = \cos \theta + \mathrm{i} \sin \theta \quad (*)\]
+
+  The conjugate (共轭) of \((*)\) is
+  \[\operatorname U^*(\theta) = \mathrm{e}^{- \mathrm{i} \theta} = \cos \theta - \mathrm{i} \sin \theta.\]
+
+  Note that this is a multiply-connected region (多连通域).
+
+  \emph{译者注：这里赵老师的板书是multiply region，经查似乎有误。}
+\end{itemize}
+
+\paragraph{v. Mass-Energy (质-能守恒) \(\Leftrightarrow\)
+Time translation invariance
+(时间平移不变性)}\label{mass-energy-ux8d28-ux80fdux5b88ux6052-leftrightarrow-time-translation-invariance-ux65f6ux95f4ux5e73ux79fbux4e0dux53d8ux6027}
+
+According to relativity theory,
+\[E = \gamma mc^2 = \frac{mc^2}{\sqrt{1 - v^2 / c^2}}.\]
+
+Expand the Taylor series of the above equation (对上式做泰勒展开), and
+we get
+\[E = mc^2 \left( 1 + \frac{1}{2} \frac{v^2}{c^2} \right) = mc^2 + \frac{1}{2} mv^2.\]
+
+This is a hidden math conservation.
+
+Mass conservation has a similar form to charge conservation, but here
+\(\boldsymbol{J}\) is the mass flow:
+\[\nabla \cdot \boldsymbol{J} + \frac{\partial \rho}{\partial t} = 0,\]
+and it can also be written in covariant and contravariant form:
+\[\partial_{\mu} J^{\mu} = 0.\]

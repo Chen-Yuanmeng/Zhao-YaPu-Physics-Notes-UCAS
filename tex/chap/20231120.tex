@@ -1,0 +1,175 @@
+\chapter{2023/11/20}\label{20231120}
+
+\section{Something about simple harmonic oscillators (SHO)
+简谐振子}\label{something-about-simple-harmonic-oscillators-sho-ux8c10ux632fux5b50}
+
+Some basic things about SHO:
+
+The basic function is \[\ddot x + \omega_0^2 x = 0,\] where
+\(\omega_0 = \sqrt{\dfrac{k}{m}}\) and \(x\) is the direction the SHO is
+on.
+
+Solve this differential equation and we can get
+\[x = A \cos (\omega_0 t + \varphi_0),\] where \(A\) is the amplitude
+(振幅) and \(\varphi_0\) is the initial phase of the SHO movement.
+
+Take the time derivative of this and
+\[\dot x = - \omega_0 A \sin (\omega_0 t + \varphi_0).\]
+
+The period is
+\[T = \dfrac{2 \pi}{\omega_0} = 2 \pi \sqrt{\dfrac{m}{k}}.\]
+
+\subsection*{(1) Relativistic SHO
+相对论谐振子}\label{relativistic-sho-ux76f8ux5bf9ux8bbaux8c10ux632fux5b50}
+
+Under relativity, we need to make corrections (修正) to the mass:
+\[m = \dfrac{m_0}{\sqrt{1 - \dfrac{v^2}{c^2}}} = \gamma m_0,\] where
+\(\gamma\) is the \textbf{Lorentz factor (洛伦兹因子)}.
+
+When \(\dfrac{v}{c} \ll 1\), we expand the Taylor series of \(m\) to
+degree 1 and we have
+\[m = m_0 \left(1 - \dfrac{v^2}{c^2}\right)^{- 1/2} \approx m_0 \left(1 + \dfrac{v^2}{2c^2}\right),\]
+and this partially explains time dilation (钟慢效应).
+
+Let \(v = - \omega_0 A \sin (\omega_0 t + \varphi_0)\), and we have
+\[m = m_0 \left[ 1 + \dfrac{ \left( - \omega_0 A \sin (\omega_0 t + \varphi_0) \right) ^2}{2c^2} \right] = m_0 \left[ 1 + \dfrac{ \omega_0^2 A^2 \sin^2 (\omega_0 t + \varphi_0)}{2c^2} \right].\]
+
+Let \(\varepsilon = \dfrac{\dfrac{1}{2} k A^2}{m_0 c^2}\), and obviously
+\(\varepsilon \ll 1\). Then we get
+\[m = m_0 \left(1 + \varepsilon \sin^2 (\omega_0 t + \varphi_0) \right).\]
+
+Take the time average of \(m\), and we get
+\[\overline{m} = m_0 \left(1 + \overline{\sin^2 (\omega_0 t + \varphi_0)} \varepsilon \right) = m_0 \left(1 + \dfrac{1}{2} \varepsilon \right),\]
+and thus we have
+\[\overline{T} = 2 \pi \sqrt{\dfrac{\overline{m}}{k}} = T_0 \sqrt{1 + \dfrac{1}{2} \varepsilon} \approx T_0 \left( 1 + \dfrac{1}{4} \varepsilon \right).\]
+
+Considering
+\(\dfrac{\overline{T} - T_0}{T_0} = \dfrac{1}{4} \varepsilon\) is rather
+close to other, more accurate results
+\(\left( \dfrac{3}{8} \varepsilon \right)\), we can say that this is
+already an acceptable approximation.
+
+\subsection*{(2) Three methods of calculating SHO
+计算简谐振子的三种方法}\label{three-methods-of-calculating-sho-ux8ba1ux7b97ux7b80ux8c10ux632fux5b50ux7684ux4e09ux79cdux65b9ux6cd5}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Newtonian Mechanics 牛顿力学
+
+  \[m \ddot x = -kx\] \[\ddot x + {k \over m } x =0 \] \[\ddot x + \omega_0^2 x =0\]
+
+\item
+  Conservation of energy 能量守恒方法
+
+  It is clear that the energy of the SHO has this form:
+  \[E = \dfrac{1}{2}kx^2 + \dfrac{1}{2} m \dot{x}^2.\]
+
+  Under ideal conditions, \(E\) is conserved, which means that
+  \[\dfrac{\mathrm{d} E}{\mathrm{d} t} = kx \dot{x} + m \dot{x} \ddot{x} = \dot{x} \left( kx + m \ddot{x} \right) \equiv 0.\]
+
+  Because \(\dot{x}\) is not conserved, we have \[kx + m \ddot{x} = 0\]
+  or \[\ddot x + \omega_0^2 x =0.\]
+\item
+  Lagrangian mechanics 拉格朗日力学
+
+  \[L=T-V = {1 \over 2}m \dot x^2-{1 \over 2}k x^2\] \[{\partial L \over \partial \dot x} = m \dot x\] \[{\partial L \over \partial x} = -kx\]
+
+  From
+  \[{\mathrm d \over \mathrm dt} {\partial L \over \partial \dot x}- {\partial L \over \partial x}=0,\]
+  we know that
+  \[{\mathrm d(m \dot x) \over \mathrm dt} - (-kx)=0, \]which is
+  \[m \ddot x +kx = 0.\] \[\ddot x + \omega_0^2 x =0.\]
+\item
+  Hamiltonian mechanics 哈密顿力学
+
+  The Hamiltonian (哈密顿量)
+  \[H = T + V = {p^2 \over 2m} + {1 \over 2} kx^2.\]
+
+  From the Hamilton canonical equations (哈密顿正则方程) \[\left\{
+    \begin{array} {l}
+    \dfrac{\partial H}{\partial p_\alpha} = \dot q_\alpha, \\[2ex]
+    \dfrac{\partial H}{\partial q_\alpha} = - \dot p_\alpha,
+    \end{array}
+    \right.\] we have
+  \[\dfrac{\partial H}{\partial p} = {p \over m} = \dot{x} \quad \text{and} \quad \dfrac{\partial H}{\partial x} = kx = - \dot{p}.\]
+
+  And thus we have
+  \[kx + \dot{p} = kx + {\mathrm{d} \over \mathrm{d}t}\left( m \dot{x} \right) = kx + m \ddot{x} = 0.\]
+\end{itemize}
+
+\section{Introduction to Lagrangian Mechanics
+拉格朗日力学入门}\label{introduction-to-lagrangian-mechanics-ux62c9ux683cux6717ux65e5ux529bux5b66ux5165ux95e8}
+
+\subsection*{(1) Praise for Lagrangian mechanics
+人们对拉格朗日力学的赞誉}\label{praise-for-lagrangian-mechanics-ux4ebaux4eecux5bf9ux62c9ux683cux6717ux65e5ux529bux5b66ux7684ux8d5eux8a89}
+
+\emph{我不想打了！这里罢工！}
+
+\subsection*{(2) Degree of freedom
+自由度}\label{degree-of-freedom-ux81eaux7531ux5ea6}
+
+In a mechanical system where there are \(n\) particles, we can determine
+the state of the system through \(n\) position vectors
+\(\boldsymbol{r}_1, \boldsymbol{r}_2, \dots, \boldsymbol{r}_n\), or a
+series of Cartesian coordinates \(u_1, u_2, \dots, u_n\) where
+\(u_i = (x_i, y_i, z_i)\).
+
+If, in the system, the number of holonomic constraints (完整约束) is
+\(h\), or \[f_i(u_1, u_2, \dots, u_n; t) = 0 \quad(i = 1, 2, ..., h),\]
+then we can express \(h\) coordinates using the other \(s = n - h\)
+coordinates.
+
+That is to say, we can express the state of the whole system with only
+\(s\) coordinates, or, for the sake of convenience, \(s\) independent
+parameters. Or to write this in mathematical language,
+\[u_i = f(q_1, q_2, \dots, q_s; t) \quad (i = 1, 2, \dots, n).\]
+
+We call these parameters \(q_1, q_2, \dots, q_s\) \textbf{generalized
+coordinates (广义坐标)}, and \(s\) \textbf{the degree of freedom (DOF,
+自由度)}.
+
+\subsection*{(3) Hamiltonian action
+哈密顿作用量}\label{hamiltonian-action-ux54c8ux5bc6ux987fux4f5cux7528ux91cf}
+
+\emph{这里肯定讲不清楚，大家可以参考理论力学课本中有关泛函、哈密顿作用量的有关内容}
+
+The \textbf{Hamiltonian action (哈密顿作用量)} is defined as
+\[S = \int_{t_1}^{t_2} L(q_i, \dot{q}_i, t) \mathrm{d}t.\]
+
+This action has the dimension of the following forms:
+\[\left[S\right] = \left[E\right] \cdot \left[t\right] = \left[p\right] \cdot \left[q\right] = \left[M\right] \cdot \left[ \theta \right].\]
+
+From this we know that action has 3 conjugate pairs (共轭对): energy and
+time (能量和时间), momentum and position (动量和位置), and momentum
+torque and angle (动量矩和角度).
+
+\subsection*{(4) 4 principles that the Lagrangian hold
+拉格朗日量的4种性质}\label{principles-that-the-lagrangian-hold-ux62c9ux683cux6717ux65e5ux91cfux76844ux79cdux6027ux8d28}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Additivity: When a system can be broken into several separate parts,
+  the system's Lagrangian is the sum of the Lagrangian of the parts.
+\item
+  Not unique
+\item
+  When the Lagrangian is multiplied by any constant, the differential
+  equation of motion still holds.
+\item
+  If two lagrangians \(L(q, \dot{q}, t)\) and \(L'(q, \dot{q}, t)\) have
+  the form
+  \[L'(q, \dot{q}, t) = L(q, \dot{q}, t) + {\mathrm{d} \over \mathrm{d} t}f(q, t),\]
+  they will imply the same differential equations of motion. For
+  example:
+
+  Under Galilean transformation, we have
+  \(\boldsymbol{r}' = \boldsymbol{r} - \boldsymbol{V}t\) and \(t' = t\).
+  Then, we know \begin{align*}
+        L'(\boldsymbol{r}', \dot{\boldsymbol{r}}', t') & = L'(\boldsymbol{r} - \boldsymbol{V}t, \dot{\boldsymbol{r}}' - \boldsymbol{V}, t) \\
+        & = L(\boldsymbol{r}, \dot{\boldsymbol{r}}, t) + \dfrac{\partial L}{\partial \boldsymbol{r}} \cdot \left( - \boldsymbol{V} t \right) + \dfrac{\partial L}{\partial \dot{\boldsymbol{r}}} \cdot \left( - \boldsymbol{V} \right) \\
+        & = L(\boldsymbol{r}, \dot{\boldsymbol{r}}, t) - {\mathrm{d} \over \mathrm{d} t} \dfrac{\partial L}{\partial \dot{\boldsymbol{r}}} \cdot \left( \boldsymbol{V} t \right) - \dfrac{\partial L}{\partial \dot{\boldsymbol{r}}} \cdot {\mathrm{d} \over \mathrm{d} t} \left( \boldsymbol{V} t \right) \\
+        & = L(\boldsymbol{r}, \dot{\boldsymbol{r}}, t) - {\mathrm{d} \over \mathrm{d} t} \left[ \dfrac{\partial L}{\partial \dot{\boldsymbol{r}}} \cdot \left( \boldsymbol{V} t \right) \right].
+    \end{align*}
+\end{itemize}

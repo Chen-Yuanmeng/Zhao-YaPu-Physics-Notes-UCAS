@@ -1,0 +1,165 @@
+\chapter{2023/11/13}\label{20231113}
+
+\section{A further derivation of the Virial theorem 位力定理的
+更深入推导}\label{a-further-ux66f4ux6df1ux5165ux63a8ux5bfc}
+
+\subsection*{(1) Euler's homogeneous function theorem
+欧拉齐次函数定理}\label{eulers-homogeneous-function-theorem-ux6b27ux62c9ux9f50ux6b21ux51fdux6570ux5b9aux7406}
+
+If a certain function \(f(x_1, x_2, \dots, x_n)\) satisfies
+\[f(\lambda x_1, \lambda x_2, \dots, \lambda x_n) = \lambda ^m f(x_1, x_2, \dots, x_n),\]
+we then call \(f(x_1, x_2, \dots, x_n)\) \textbf{the homogeneous
+function of degree \(m\) (\(m\)次齐次函数)}.
+
+For example,
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Function & $T(\dot q) = \frac{1}{2} m \dot q^2$ & $U(h) = mgh$ & $U(x) = \frac{1}{2} kx^2$ & $U(r) = -\frac{\kappa}{r}$ \\
+        \hline
+        Degree $\lambda$ & $2$ & $1$ & $2$ & $-1$ \\
+        \hline
+    \end{tabular}
+    \captionof{table}{Examples of homogeneous functions}
+\end{center}
+
+\subsection*{(2) Derivation of the Virial theorem again
+位力定理的再次推导}\label{derivation-of-the-virial-theorem-again-ux4f4dux529bux5b9aux7406ux7684ux518dux6b21ux63a8ux5bfc}
+
+Take the total differential with respect to \(\lambda\) of the left-hand
+side, and we have
+\[{\mathrm df \over \mathrm d \lambda} = {\partial f \over \partial (\lambda x_1)} {\mathrm d (\lambda x_1) \over \mathrm d \lambda} + {\partial f \over \partial (\lambda x_2)} {\mathrm d (\lambda x_2) \over \mathrm d \lambda} + \cdots + {\partial f \over \partial (\lambda x_n)} {\mathrm d (\lambda x_n) \over \mathrm d \lambda} = \sum _{i=1}^n x_i {\partial f \over \partial (\lambda x_i)}.\]
+
+Take the differential with respect to \(\lambda\) on the right-hand
+side, and we have
+\[{\mathrm d (\lambda^m f) \over \mathrm d \lambda} = m \lambda^{m - 1} f.\]
+
+Let \(\lambda = 1\), and we have
+\[mf = \sum _{i=1}^n x_i {\partial f \over \partial x_i}.\]
+
+As we have said last session,
+\[{\partial T \over \partial \boldsymbol v} = {1 \over 2} m {\partial \over \partial \boldsymbol v}(\boldsymbol v \cdot \boldsymbol v) = {1 \over 2} m (\mathbf e \cdot \boldsymbol v + \boldsymbol v \cdot \mathbf e) = {1 \over 2} m_i \cdot 2 \boldsymbol v_i =  m_i \boldsymbol v_i = \boldsymbol p.\]
+
+\begin{align*}
+    2T & = \sum_i \boldsymbol v_i \cdot {\partial T \over \partial \boldsymbol v_i} \\
+    & = \sum_i \boldsymbol p_i \cdot {\mathrm d \boldsymbol r_i \over \mathrm dt} \\
+    & = {\mathrm d \over \mathrm dt} \sum_i \boldsymbol p_i \cdot \boldsymbol r_i - \sum_i {\mathrm d \boldsymbol p_i \over \mathrm dt} \cdot \boldsymbol r_i. \\
+\end{align*}
+
+In 1870, Clausius and Maxwell proposed that the average of the
+derivative of a bounded function over a period of time to infinity is
+zero. \emph{(整理者注：详见上节课笔记)}
+
+Consequently we have
+\[\overline{2T} = \overline{- \boldsymbol r_i \cdot \boldsymbol F_i}.\]
+
+\subsection*{(3) Sundry 杂项}\label{sundry-ux6742ux9879}
+
+Similarly, we have, for a rigid body,
+\[T = \boldsymbol \omega \cdot \mathbf{I} \cdot \boldsymbol \omega,\]
+\[\dfrac{\partial T}{\partial \boldsymbol \omega} = {1 \over 2} (\mathbf{e}^T \cdot \mathbf{I} \cdot \boldsymbol{\omega} + \omega^T \cdot \mathbf{I} \cdot \mathbf{e}) = {1 \over 2} (\omega \cdot \mathbf{I} + \omega \cdot \mathbf{I}) = \omega \cdot \mathbf{I}  = \boldsymbol{L}.\]
+
+In relativity, we have the Lagrangian (拉格朗日量):
+\[L = - m c^2 \sqrt{1 - \dfrac{v^2}{c^2}},\]
+\[\dfrac{\partial L}{\partial \boldsymbol v} = - mc^2 \dfrac{- (\mathbf e \cdot \boldsymbol v + \boldsymbol v \cdot \mathbf e)}{2 \sqrt{1 - \dfrac{v^2}{c^2}}} {1 \over c^2} = \dfrac{m \boldsymbol{v}}{\sqrt{1 - \dfrac{v^2}{c^2}}}.\]
+
+\section{Application of the Virial theorem
+位力定理的应用}\label{application-of-the-virial-theorem-ux4f4dux529bux5b9aux7406ux7684ux5e94ux7528}
+
+\subsection*{(1) Conservative force field
+保守力场}\label{conservative-force-field-ux4fddux5b88ux529bux573a}
+
+In a conservative field whose potential is \(U\),
+\[\boldsymbol{F} = - \nabla U,\]
+\[\overline{2T} = \overline{\sum \boldsymbol{r}_i \cdot \dfrac{\partial U}{\partial \boldsymbol{r}_i}} = \lambda U.\]
+
+Also, we have \[\overline{U} + \overline{T} = E = \mathrm{const},\] and we
+can get from here \[\left\{
+    \begin{array}{l}
+        \overline{U} = \dfrac{2}{\lambda + 2} E, \\[1.5ex]
+        \overline{T} = \dfrac{\lambda}{\lambda + 2} E.
+    \end{array}
+\right.\]
+
+If \(\lambda = 2\) (for example when \(U = \dfrac{1}{2}k x^2\)), we have
+\(\overline{U} = \overline{T}\).
+
+\subsection*{(2) Simple Harmonic Oscillator
+简谐振子}\label{simple-harmonic-oscillator-ux7b80ux8c10ux632fux5b50-2}
+
+The basic form of the SHO is \[\ddot{x} + \omega^2 x = 0,\] where
+\(\omega = \sqrt{\dfrac{k}{m}}\).
+
+The solution is \[x = x_0 \sin \omega t,\] and from this we can know
+that \[\dot x = \omega x_0 \cos \omega t.\]
+
+Left-hand side: \begin{align*}
+    \overline{\cos ^2 \omega t} & = \dfrac{\omega}{2 \pi} \int_0^{2 \pi/\omega}  \cos^2 \omega t \mathrm{d}t \\
+    & = \dfrac{1}{2 \pi} \int_0^{2 \pi} \cos^2 \omega t \mathrm{d} (\omega t) \\
+    & = \dfrac{1}{2 \pi} \int_0^{2 \pi} \dfrac{1 + \cos 2 \omega t}{2} \mathrm{d} (\omega t) \\
+    & = \dfrac{1}{2 \pi} \left( \int_0^{2 \pi} \dfrac{1}{2} \mathrm{d} (\omega t) + \int_0^{2 \pi} \dfrac{\cos 2 \omega t}{2} \mathrm{d} (\omega t) \right) \\
+    & = \dfrac{1}{2 \pi} \left( \dfrac{1}{2} \cdot 2 \pi + \dfrac{1}{2} \cdot \dfrac{1}{2} \int_0^{4 \pi} \cos 2 \omega t \mathrm{d} (2 \omega t) \right) \\
+    & = \dfrac{1}{2 \pi} \left( \dfrac{1}{2} \cdot 2 \pi + \left. \dfrac{1}{4} \sin 2 \omega t \right|_{0}^{4 \pi} \right) \\
+    & = \dfrac{1}{2}.
+\end{align*}
+\[\overline{2T} = 2 \cdot \overline{\dfrac{1}{2}m \dot x^2} = m \omega^2 x_0^2 \overline{\cos ^2 \omega t} = \dfrac{1}{2} m \omega^2 x_0^2 = \dfrac{1}{2} k x_0^2.\]
+
+Right-hand side:
+\[\overline{- \sum \boldsymbol{F}_i \cdot \boldsymbol{r}_i} = - \overline{(- kx) \cdot x} = \dfrac{1}{2} k x_0^2.\]
+
+\subsection*{(3) Universal gravitation field
+万有引力场}\label{universal-gravitation-field-ux4e07ux6709ux5f15ux529bux573a}
+
+The potential is \[U(r) = - {GMm \over r}.\]
+
+Left-hand side:
+\[- {GMm \over r^2} \hat{\boldsymbol{r}} = - m \omega^2 r \hat{\boldsymbol{r}}.\]
+That is, \[{GMm \over r} = m \omega^2 r^2 = \overline{2T}.\]
+
+Right-hand side:
+\[\overline{- \boldsymbol{F} \cdot \boldsymbol{r}} = - \overline{\left( r \cdot \hat{\boldsymbol{r}} \right) \cdot \left(- {GMm \over r^2} \hat{\boldsymbol{r}} \right)} = {GMm \over r}.\]
+
+\subsection*{(4) Ideal gas law
+理想气体状态方程}\label{ideal-gas-law-ux7406ux60f3ux6c14ux4f53ux72b6ux6001ux65b9ux7a0b}
+
+\begin{quote}
+Experiment $\to$ Phenomenological model (唯象模型);
+Theory $\to$ Mathematical Structure/framework.
+\end{quote}
+
+\emph{整理者注：赵老师上课用 \(n\)
+表示了分子数和物质的量，存在不统一。在热学中一般用 \(n\)
+表示粒子数密度。故以下，按照热学惯例，用 \(N\) 表示粒子数，\(\nu\)
+表示物质的量。}
+
+According to the equipartition theorem (能均分定理), for every degree of
+freedom, the energy is \[\varepsilon = {1 \over 2} k_\mathrm{B}T.\]
+
+Consider monatomic gas with the amount of substance \(\nu\)(物质的量为
+\(\nu\) 单原子分子气体):
+\[\overline{T} = {3 \over 2} N k_\mathrm{B} T = {3 \over 2} \nu N_\mathrm{A} k_\mathrm{B} T.\]
+
+Right-hand side:
+\[\mathrm{d} \boldsymbol{F} = - \boldsymbol{n} f \mathrm{d}A.\]
+\[\overline{- \sum \boldsymbol{F}_i \cdot \boldsymbol{r}_i} = \overline{\sum_{i = 1}^{n} \boldsymbol{r}_i \cdot \boldsymbol{n} f \mathrm{d}A} \overset{\text{直接写成积分形式} }{=\!=\!=\!=\!=\!=\!=\!=\!=\!=} \oiint \boldsymbol{r}_i \cdot \boldsymbol{n} f \mathrm{d}A = p \oiint \boldsymbol{r}_i \cdot \boldsymbol{n} \mathrm{d}A.\]
+
+According to Gauss's divergence theorem (高斯散度定理),
+\[\iiint (\nabla \cdot \boldsymbol F) \mathrm dV = \oiint_{\partial V} \boldsymbol F \cdot \mathrm d \boldsymbol S,\]
+we can have \[\overline{- \sum \boldsymbol{F}_i \cdot \boldsymbol{r}_i} = p \iiint \left( \nabla \cdot \boldsymbol{r}_i \right) \mathrm{d} V = p \iiint 3 \mathrm{d} V = 3pV.\]
+
+Consequently, we have
+\[3pV = 2 \cdot {3 \over 2} \nu N_\mathrm{A} k_\mathrm{B} T,\]
+\[pV = \nu N_\mathrm{A} k_\mathrm{B} T = \nu RT.\]
+
+\begin{quote}
+作业1：查范德瓦尔斯 (van der Waals) 方程的形式。
+
+附答案： \[\left( p + {a \over V_m^2} \right) (V_m - b) = RT,\] 其中
+\(a = 4 V_0 \varepsilon_0 N_A^2, \ b = 4N_AV_0.\)
+\end{quote}
+
+\begin{quote}
+作业2：了解范德瓦尔斯 (van der Waals) 和庞加莱 (Poincaré)
+争夺诺贝尔奖的故事
+\end{quote}

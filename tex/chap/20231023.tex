@@ -1,0 +1,165 @@
+\chapter{2023/10/23}\label{20231023}
+
+\begin{quote}
+作业：黑洞熵是什么
+\end{quote}
+
+\emph{任正非：华为的自我批判性}
+
+\section{Something about Levi-Civita symbols and matrices
+关于列维-奇维塔符号和矩阵}\label{something-about-levi-civita-symbols-and-matrices-ux5173ux4e8eux5217ux7ef4-ux5947ux7ef4ux5854ux7b26ux53f7ux548cux77e9ux9635}
+
+Consider a 3 by 3 matrix (\(3 \times 3\) 矩阵) \(\mathbf A\):
+\[\mathbf A = \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33} \\
+\end{bmatrix}.\]
+
+The determinant of \(\mathbf{A}\) is \begin{align*}
+    \det (\mathbf A) & = \begin{vmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33} \\
+    \end{vmatrix} \\
+    & = \varepsilon_{\alpha \beta \gamma} a_{1 \alpha} a_{2 \beta} a_{3 \gamma} = \varepsilon_{\alpha \beta \gamma} a_{2 \alpha} a_{3 \beta} a_{1 \gamma} = \varepsilon_{\alpha \beta \gamma} a_{3 \alpha} a_{1 \beta} a_{2 \gamma} \\ 
+    & = - \varepsilon_{\alpha \beta \gamma} a_{3 \alpha} a_{2 \beta} a_{1 \gamma} = - \varepsilon_{\alpha \beta \gamma} a_{1 \alpha} a_{3 \beta} a_{2 \gamma} = - \varepsilon_{\alpha \beta \gamma} a_{2 \alpha} a_{1 \beta} a_{3 \gamma}. \\ 
+\end{align*}
+
+Consider \((i, j, k)\) taking the following values, and \(\varepsilon_{ijk} \varepsilon_{\alpha \beta \gamma} a_{i \alpha} a_{j \beta} a_{k \gamma}\) will become respectively \begin{align*}
+    \text{even} &
+    \left\{
+        \begin{aligned}
+            (1, 2, 3) & \ \ \ & \varepsilon_{123} \varepsilon_{\alpha \beta \gamma} a_{1 \alpha} a_{2 \beta} a_{3 \gamma} & = \det (\mathbf A); \\
+            (2, 3, 1) & \ \ \ & \varepsilon_{231} \varepsilon_{\alpha \beta \gamma} a_{2 \alpha} a_{3 \beta} a_{1 \gamma} & = \det (\mathbf A); \\
+            (3, 1, 2) & \ \ \ & \varepsilon_{312} \varepsilon_{\alpha \beta \gamma} a_{3 \alpha} a_{1 \beta} a_{2 \gamma} & = \det (\mathbf A); \\
+        \end{aligned}
+    \right.
+    \\
+    \text{odd} &
+    \left\{
+        \begin{aligned}
+            (3, 2, 1) & \ \ \ & \varepsilon_{321} \varepsilon_{\alpha \beta \gamma} a_{3 \alpha} a_{2 \beta} a_{1 \gamma} & = - \det (\mathbf A); \\
+            (2, 1, 3) & \ \ \ & \varepsilon_{213} \varepsilon_{\alpha \beta \gamma} a_{2 \alpha} a_{1 \beta} a_{3 \gamma} & = - \det (\mathbf A); \\
+            (1, 3, 2) & \ \ \ & \varepsilon_{132} \varepsilon_{\alpha \beta \gamma} a_{1 \alpha} a_{3 \beta} a_{2 \gamma} & = - \det (\mathbf A). \\
+        \end{aligned}
+    \right.
+\end{align*}
+
+Therefore, we can say
+\[\det (\mathbf A) = {1 \over 6} \varepsilon_{ijk} \varepsilon_{\alpha \beta \gamma} a_{i \alpha} a_{j \beta} a_{k \gamma}.\]
+
+\section{Deduction of electromagnetic wave equations
+电磁波方程推导}\label{deduction-of-electromagnetic-wave-equations-ux7535ux78c1ux6ce2ux65b9ux7a0bux63a8ux5bfc}
+
+In vacuum (真空), \(\rho = 0\) and
+\(\boldsymbol j = \rho \boldsymbol v_d = \boldsymbol 0\), and Maxwell's
+equations degenerate into the following form: \[\left \{
+    \begin{array}{l} 
+        \nabla \cdot \boldsymbol E = 0; \\
+        \nabla \cdot \boldsymbol B = 0; \\
+        \nabla \times \boldsymbol E = -\dfrac{\partial B}{\partial t}; \quad (*) \\[1.5ex]
+        \nabla \times \boldsymbol B = \mu_0 \varepsilon_0 \dfrac{\partial \boldsymbol E}{ \partial t} = \dfrac{1}{c^2} \dfrac{\partial \boldsymbol E}{ \partial t}.
+    \end{array} 
+\right.\]
+
+Get the curl of the left and right sides of \((*)\):
+
+Left-hand side: \begin{align*}
+    \nabla \times (\nabla \times \boldsymbol E) & = \nabla \times \left({\partial E_j \over \partial x_i} \varepsilon_{ijk} \boldsymbol e_k \right) \\
+    & = \left({\partial \over \partial x_\ell} \boldsymbol e_\ell \right) \times \left({\partial E_j \over \partial x_i} \varepsilon_{ijk} \boldsymbol e_k \right) \\
+    & = {\partial^2 E_j \over \partial x_i \partial x_\ell} \varepsilon_{ijk} \varepsilon_{\ell k m} \boldsymbol e_m \\
+    & = {\partial^2 E_j \over \partial x_i \partial x_\ell} \varepsilon_{ijk} \varepsilon_{m \ell k} \boldsymbol e_m \\
+\end{align*}
+\begin{align*}
+    & = {\partial^2 E_j \over \partial x_i \partial x_\ell} (\delta_{im}\delta_{j \ell} - \delta_{i \ell}\delta_{jm}) \boldsymbol e_m \\
+    & = {\partial^2 E_j \over \partial x_i \partial x_j} \boldsymbol e_i - {\partial^2 E_j \over \partial x_i^2} \boldsymbol e_j \\
+    & = \boldsymbol e_i {\partial \over \partial x_i}\left({\partial E_j \over \partial x_j}\right) - {\partial^2 \over \partial x_i^2} E_j \boldsymbol e_j \\
+    & = \nabla (\nabla \cdot  \boldsymbol E) - \nabla^2 \boldsymbol E \\
+    & = - \nabla^2 \boldsymbol E.
+\end{align*}
+
+Right-hand side: \begin{align*}
+    \nabla \times \left(-\dfrac{\partial B}{\partial t} \right) & = -\dfrac{\partial}{\partial t} \left( \nabla \times \boldsymbol B \right) \\
+    & = -\dfrac{\partial}{\partial t} \left(\dfrac{1}{c^2} \dfrac{\partial \boldsymbol E}{\partial t}\right) \\
+    & = - \dfrac{1}{c^2} \dfrac{\partial^2 \boldsymbol E}{\partial t^2}.
+\end{align*}
+
+Consequently we have
+\[ - \nabla^2 \boldsymbol E = - \dfrac{1}{c^2} \dfrac{\partial^2 \boldsymbol E}{\partial t^2},\]
+\[\left(\dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2}- \nabla^2 \right) \boldsymbol E = \Box \boldsymbol E = \boldsymbol 0,\]
+which is a 2nd order partial differential equation (二阶偏微分方程).
+
+Similarly we have:
+
+Left-hand side: \begin{align*}
+    \nabla \times (\nabla \times \boldsymbol B) & = \nabla \times \left({\partial E_j \over \partial x_i} \varepsilon_{ijk} \boldsymbol e_k \right) \\
+    & = \nabla (\nabla \cdot  \boldsymbol B) - \nabla^2 \boldsymbol B \\
+    & = - \nabla^2 \boldsymbol B.
+\end{align*}
+
+Right-hand side: \begin{align*}
+    \nabla \times \left(-\dfrac{\partial B}{\partial t} \right) & = \nabla \times \left(\dfrac{1}{c^2} \dfrac{\partial \boldsymbol E}{\partial t}\right) \\
+    & = \dfrac{1}{c^2} \dfrac{\partial}{\partial t} (\nabla \times \boldsymbol E) \\
+    & = - \dfrac{1}{c^2} \dfrac{\partial^2 \boldsymbol B}{\partial t^2}.
+\end{align*}
+
+\[\left(\dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2}- \nabla^2 \right) \boldsymbol B = \Box \boldsymbol B = \boldsymbol 0.\]
+
+Electromagnetic wave equations: \[\left\{
+    \begin{aligned}
+        \left(\dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2}- \nabla^2 \right) \boldsymbol E = \boldsymbol 0, \\
+        \left(\dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2}- \nabla^2 \right) \boldsymbol B = \boldsymbol 0.
+    \end{aligned}
+\right.\]
+
+\emph{考试晕倒：国科大优秀传统}
+
+\section{A second proof of some conclusions
+一些结论的第二种证明}\label{a-second-proof-of-some-conclusions-ux4e00ux4e9bux7ed3ux8bbaux7684ux7b2cux4e8cux79cdux8bc1ux660e}
+
+\subsection*{(1) The curl of the gradient of any scalar field is
+always the zero vector field
+梯度无旋}\label{the-curl-of-the-gradient-of-any-scalar-field-is-always-the-zero-vector-field-ux68afux5ea6ux65e0ux65cb}
+
+\begin{align*}
+    \nabla \times \left(\nabla \varphi \right) & = \nabla \times \left({\partial \varphi \over \partial x_i} \boldsymbol e_i \right) = {\partial \over \partial x_j} {\partial \varphi \over \partial x_i} \varepsilon_{jik} \boldsymbol e_k \\
+    & \overset{\text{interchange} \ i \ \mathrm{\&} \ j }{=\!=\!=\!=\!=\!=\!=\!=\!=\!=} {\partial \over \partial x_i} {\partial \varphi \over \partial x_j} \varepsilon_{ijk} \boldsymbol e_k \\
+    & \overset{\varphi \ \text{二阶光滑(二阶连续可导)}}{=\!=\!=\!=\!=\!=\!=\!=\!=\!=\!=\!=\!=\!=\!=} {1 \over 2} \left({\partial^2 \varphi \over \partial x_i \partial x_j} \varepsilon_{jik} + {\partial^2 \varphi \over \partial x_i \partial x_j} \varepsilon_{ijk} \right) \boldsymbol e_k = \boldsymbol 0.
+\end{align*}
+
+\subsection*{(2) The divergence of the curl of any vector field is
+equal to zero
+旋度无散}\label{the-divergence-of-the-curl-of-any-vector-field-is-equal-to-zero-ux65cbux5ea6ux65e0ux6563}
+
+\begin{align*}
+\nabla \cdot \left(\nabla \times \boldsymbol A \right) & = \nabla \cdot \left({\partial A_j \over \partial x_i} \varepsilon_{ijk} \boldsymbol e_k \right) = {\partial \over \partial x_\ell} {\partial A_j \over \partial x_i} \varepsilon_{ijk} \boldsymbol e_k \cdot \boldsymbol e_\ell \\
+& \overset{\varphi \ \text{二阶光滑(二阶连续可导)}}{=\!=\!=\!=\!=\!=\!=\!=\!=\!=\!=\!=\!=\!=} {1 \over 2} \left({\partial^2 \varphi \over \partial x_i \partial x_j} \varepsilon_{jik} + {\partial^2 \varphi \over \partial x_i \partial x_j} \varepsilon_{ijk} \right) \boldsymbol e_k = \boldsymbol 0.
+\end{align*}
+
+\section{Vortices and vorticity
+涡旋和涡量}\label{vortices-and-vorticity-ux6da1ux65cbux548cux6da1ux91cf}
+
+\emph{(译者注：vortex的复数形式为vortices)}
+
+Vorticity is defined as the curl of the velocity of the field
+(速度场的旋度) \(\nabla \times \boldsymbol v\).
+
+\begin{align*}
+    \left(\nabla \times \boldsymbol v \right) \times \boldsymbol v
+    & = \left({\partial v_j \over \partial x_i} \varepsilon_{ijk} \boldsymbol e_k \right) \times \left(v_\ell \boldsymbol e_\ell \right) \\
+    & = v_\ell {\partial v_j \over \partial x_i} \varepsilon_{ijk} \varepsilon_{\ell mk} \boldsymbol e_m \\
+    & = v_\ell {\partial v_j \over \partial x_i} (\delta_{i \ell}\delta_{jm} - \delta_{im}\delta_{j \ell}) \boldsymbol e_m \\
+    & = v_i {\partial v_j \over \partial x_i} \boldsymbol e_j - v_j {\partial v_j \over \partial x_i} \boldsymbol e_i \\
+    & = \left(v_i {\partial \over \partial x_i}\right) v_j \boldsymbol e_j - v_j {\partial v_j \over \partial x_i} \boldsymbol e_i \\
+    & = \left(\boldsymbol v \cdot \nabla \right) \boldsymbol v - \nabla \left( {1 \over 2} \boldsymbol v \cdot \boldsymbol v \right) \\
+    & = \left(\boldsymbol v \cdot \nabla \right) \boldsymbol v - \nabla \left( {1 \over 2} v^2 \right). \\
+\end{align*}
+
+The material derivative (物质导数) of \(\boldsymbol v\) is shown as
+follows:
+\[\boldsymbol a = {\mathrm D \boldsymbol v \over \mathrm Dt} \equiv {\partial \boldsymbol v \over \partial t} + \left(\boldsymbol v \cdot \nabla \right) \boldsymbol v = {\partial \boldsymbol v \over \partial t} + \left(\nabla \times \boldsymbol v \right) \times \boldsymbol v + \nabla \left( {1 \over 2} v^2 \right).\]
+
+Consequently, the Navier-Stokes equations can be written as
+\[ {\partial \boldsymbol v \over \partial t} + \left(\nabla \times \boldsymbol v \right) \times \boldsymbol v + \nabla \left( {1 \over 2} v^2 \right) = -{1 \over \rho} \nabla p + \mu \nabla^2 \boldsymbol v + \boldsymbol g,\]
+where \(\boldsymbol g = - \nabla (gh).\)

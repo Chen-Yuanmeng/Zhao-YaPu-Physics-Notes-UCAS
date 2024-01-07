@@ -1,0 +1,146 @@
+\chapter{2023/11/08}\label{20231108}
+
+\textbf{\emph{划重点！划重点！}}
+
+\textbf{\emph{本次课上，赵爹披露重大新闻，引起全班轰动！}}
+
+\textbf{\emph{据悉，赵爹曾四次受到剑桥大学出版社邀请，将《力学讲义》译成英文出版！！他没有去！！}}
+
+\section{Galilean invariance
+伽利略不变性}\label{galilean-invariance-ux4f3dux5229ux7565ux4e0dux53d8ux6027}
+
+\subsection*{(1) Basic forms}\label{basic-forms}
+
+The basic foundation of Galilean invariance is \[\left\{
+    \begin{array}{l}
+        \boldsymbol r' = \boldsymbol r - \boldsymbol Vt, \\
+        t' = t,
+    \end{array}
+\right.\] where \(\boldsymbol V\) is a constant vector (常矢量).
+
+According to this foundation, we can know:
+\[{\partial \over \partial t} = {\partial \over \partial t'}{\partial t' \over \partial t} + {\partial \over \partial \boldsymbol r'}{\partial \boldsymbol r' \over \partial t} = {\partial \over \partial t'} - \boldsymbol V \cdot \nabla';\]
+\[{\partial \over \partial \boldsymbol r} = \nabla = {\partial \over \partial \boldsymbol r'}{\partial \boldsymbol r' \over \partial \boldsymbol r} = \nabla' \cdot \mathbf I = \nabla'.\]
+
+\subsection*{(2) Three principal invariants of second-order tensors
+二阶张量的三个主不变量}\label{three-principal-invariants-of-second-order-tensors-ux4e8cux9636ux5f20ux91cfux7684ux4e09ux4e2aux4e3bux4e0dux53d8ux91cf}
+
+\begin{quote}
+\emph{此话题似乎由课上一位同学指出的赵爹的一个拼写错误引起，和上下文没有大的关系。故译者另附表格，希望大家不要弄混：}
+    \begin{center}
+        \begin{tabular}{|c|l|}
+            \hline
+            \textbf{Word} & \textbf{Definition} \\
+            \hline
+            invariant & \textit{n.} 不变量; \textit{adj.} 不变的 \\
+            \hline
+            invariance & \textit{n.} 不变性 \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{quote}
+
+Suppose we have a matrix \[\mathbf A = 
+\begin{bmatrix}
+    A_{11} & A_{12} &A_{13} \\
+    A_{21} & A_{22} &A_{23} \\
+    A_{31} & A_{32} &A_{33}
+\end{bmatrix}.\]
+
+If \(\mathbf A \cdot \boldsymbol v = \lambda \boldsymbol v\), then we
+call \(\boldsymbol v\) the \textbf{eigenvector (特征矢量，本征矢量)} of
+the linear transformation \(\mathbf A\), and \(\lambda\) the
+\textbf{eigenvalue (特征值，本征值)} of \(\mathbf A\).
+
+From this, we have
+\[\mathbf A \cdot \boldsymbol v - \lambda \boldsymbol v = \boldsymbol 0,\]
+and thus
+\[(\mathbf A - \lambda \mathbf e) \cdot \boldsymbol v = \boldsymbol 0,\]
+which is a homogeneous (齐次的) equation. In order for this equation to
+have a non-trivial solution (非平凡解), we need to have
+\[\det (\mathbf A - \lambda \mathbf e) = 0.\] That is, \[\begin{vmatrix}
+    A_{11} - \lambda & A_{12} & A_{13} \\
+    A_{21} & A_{22} - \lambda & A_{23} \\
+    A_{31} & A_{32} & A_{33} - \lambda 
+\end{vmatrix} = 0,\] \begin{align*}
+    (A_{11} - \lambda)(A_{22} - \lambda)(A_{33} - \lambda) + A_{12}A_{23}A_{31} + A_{13}A_{21}A_{32} & \\
+    - (A_{11} - \lambda)A_{23}A_{32} - A_{13}(A_{22} - \lambda)A_{31} - A_{12}A_{21}(A_{33} - \lambda) & = 0.
+\end{align*}
+
+Arrange this formula, and we get
+\[\lambda ^3 - I_1 \lambda ^2 + I_2 \lambda - I_3 = 0,\] in which
+\begin{align*}
+    I_1 & = \operatorname{tr} \mathbf{A} = A_{11} + A_{22} + A_{33} = \lambda_1 + \lambda_2 + \lambda_3, \\
+    I_2 & = \frac{1}{2} \left[ (\operatorname{tr} \mathbf{A})^2 - \operatorname{tr} \left( \mathbf{A}^2 \right) \right] \\
+    & = A_{11} A_{22} + A_{22} A_{33} + A_{11} A_{33} - A_{12} A_{21} - A_{23} A_{32} - A_{13} A_{31} \\ & = \lambda_1 \lambda_2 + \lambda_1 \lambda_3 + \lambda_2 \lambda_3, \\
+    I_3 & = \det (\mathbf{A}) \\ & = - A_{13} A_{22} A_{31} + A_{12} A_{23} A_{31} + A_{13} A_{21} A_{32} \\ & \quad - A_{11} A_{23} A_{32} - A_{12} A_{21} A_{33} +   A_{11} A_{22} A_{33} \\ & = \lambda_1 \lambda_2 \lambda_3.
+\end{align*}
+
+\subsection*{(3) The Galilean Invariance in the Navier-Stokes
+equations
+纳维-斯托克斯方程的伽利略不变性}\label{the-galilean-invariance-in-the-navier-stokes-equations-ux7eb3ux7ef4-ux65afux6258ux514bux65afux65b9ux7a0bux7684ux4f3dux5229ux7565ux4e0dux53d8ux6027}
+
+The Navier-Stokes equations is
+\[ {\partial \boldsymbol v \over \partial t} +(\boldsymbol v \cdot \nabla) \boldsymbol v = - {1 \over \rho} \nabla p + \mu \nabla^2 \boldsymbol v + \boldsymbol g.\]
+
+Put it in a Galilean transformation, and we can get \begin{align*}
+    \text{LHS} & = \left( {\partial \over \partial t'} - \boldsymbol V \cdot \nabla' \right)(\boldsymbol v' + \boldsymbol V) + [(\boldsymbol v' + \boldsymbol V) \cdot \nabla'](\boldsymbol v' + \boldsymbol V) \\
+    & = {\partial \boldsymbol v' \over \partial t} + \boldsymbol 0 - (\boldsymbol V \cdot \nabla') \boldsymbol v' - \boldsymbol 0 + (\boldsymbol v' \cdot \nabla') \boldsymbol v' + (\boldsymbol V \cdot \nabla') \boldsymbol v' \\
+    & = {\partial \boldsymbol v' \over \partial t} + (\boldsymbol v' \cdot \nabla') \boldsymbol v'; \\
+    \text{RHS} & = - {1 \over \rho} \nabla' \left( p + {1 \over 2} \rho V^2 \right) + \mu \nabla'^2 (\boldsymbol v' + \boldsymbol V) + \boldsymbol g \\
+    & = - {1 \over \rho} \nabla' p + \mu \nabla'^2 \boldsymbol v' + \boldsymbol g. \\
+\end{align*}
+
+When \(\boldsymbol g\) conforms to the Galilean invariance, the
+Navier-Stokes equations shall conform to the Galilean invariance.
+
+\section{Square-Cube law (1638)
+平方-立方定律}\label{square-cube-law-1638-ux5e73ux65b9-ux7acbux65b9ux5b9aux5f8b}
+
+Take \(L\) as the characteristic value (特征尺度), and the area
+\(A \sim L^2\), whereas the volume \(V \sim L^3\), proportional to the
+weight. Consequently, we have \[{V \over A} \sim L.\]
+
+For the full story, please refer to the ``Philosophy of Science''
+section.
+
+\section{Virial Theorem
+位力定理}\label{virial-theorem-ux4f4dux529bux5b9aux7406}
+
+\emph{杨振宁：不会凑就不要做理论物理研究}
+
+The kinetic energy is
+\[T = \sum_i {1 \over 2}m_i v_i^2 = \sum_i {1 \over 2}m_i \boldsymbol v_i \cdot \boldsymbol v_i.\]
+
+Take the derivative of \(T\) with respect to \(\boldsymbol v\), we get
+\begin{align*}
+    {\partial T \over \partial \boldsymbol v} & = \sum_i {1 \over 2} m_i {\partial \over \partial \boldsymbol v}(\boldsymbol v_i \cdot \boldsymbol v_i) \\
+    & = \sum_i {1 \over 2} m_i (\mathbf I \cdot \boldsymbol v_i + \boldsymbol v_i \cdot \mathbf I) \\
+    & = \sum_i {1 \over 2} m_i \cdot 2 \boldsymbol v_i = \sum_i m_i \boldsymbol v_i = \boldsymbol p.
+\end{align*}
+
+Also, we have \begin{align*}
+    2T & = \sum_i m_i \boldsymbol v_i \cdot \boldsymbol v_i \\
+    & = \sum_i \boldsymbol p_i \cdot \boldsymbol v_i \\
+    & = \sum_i \boldsymbol p_i \cdot {\mathrm d \boldsymbol r_i \over \mathrm dt} \\
+    & = {\mathrm d \over \mathrm dt} \sum_i \boldsymbol p_i \cdot \boldsymbol r_i - \sum_i {\mathrm d \boldsymbol p_i \over \mathrm dt} \cdot \boldsymbol r_i \\
+    & = {\mathrm d \over \mathrm dt} \sum_i \boldsymbol p_i \cdot \boldsymbol r_i - \sum_i \underset{\text{位}}{\underline{\boldsymbol r_i}} \cdot \underset{\text{力}}{\underline{\boldsymbol F_i}}. \quad(*)
+\end{align*}
+
+According to definition, the average of \(g(t)\) over a period of time
+(from \(0\) to \(\tau\)) can be written as follows:
+\[\left \langle g(t) \right \rangle_\tau = \frac{1} \tau \int_0^\tau g(t) \mathrm dt.\]
+
+Assuming that $g(t) = \dfrac{\mathrm d G(t)}{\mathrm dt}$, we have \[\left \langle g(t) \right \rangle_\tau = \frac{1} \tau \int_0^\tau g(t) \mathrm dt = \frac{1}{\tau} \int_{G(0)}^{G(\tau)} \mathrm dG = \frac{G(\tau) - G(0)}{\tau},\] and, if \(G\) is a bounded function (有界函数), when \(\tau \to + \infty\), we have \[\left \langle g(t) \right \rangle_\tau = \lim_{\tau \to + \infty} \frac{1} \tau \int_0^\tau g(t) \mathrm dt = \lim_{\tau \to + \infty} \frac{1}{\tau} \int_{G(0)}^{G(\tau)} \mathrm dG = \lim_{\tau \to + \infty} \frac{G(\tau) - G(0)}{\tau} = 0.\]
+
+In the case of bounded movement (有界运动),
+\(\boldsymbol p_i \cdot \boldsymbol r_i\) is bounded as well, and when we take the average of \((*)\) over time, we can get that \[\left \langle {\mathrm d \over \mathrm dt} \sum_i \boldsymbol p_i \cdot \boldsymbol r_i \right \rangle_\tau = \lim_{\tau \to + \infty} \frac{\boldsymbol p_i(\tau) \cdot \boldsymbol r_i(\tau) - \boldsymbol p_i(0) \cdot \boldsymbol r_i(0)}{\tau} = 0,\]
+and thus
+\[\left \langle 2T \right \rangle_\tau = - \left \langle \sum_i \boldsymbol r_i \cdot \boldsymbol F_i \right \rangle_\tau = - \sum_i \left \langle \boldsymbol r_i \cdot \boldsymbol F_i \right \rangle_\tau.\]
+
+This brings us to Virial theorem:
+\[\left \langle T \right \rangle = - {1 \over 2} \sum_i \left \langle \boldsymbol r_i \cdot \boldsymbol F_i \right \rangle,\]
+where \(T\) is the total kinetic energy of the particles,
+\(\boldsymbol F_i\) represents the force on the \(i\) th particle, which
+is located at position \(\boldsymbol r_i\), and angle brackets
+\(\langle \rangle\) represent the average over time of the enclosed quantity.

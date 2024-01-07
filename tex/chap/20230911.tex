@@ -1,0 +1,128 @@
+\chapter{2023/9/11}\label{20230911}
+
+\section{Introduction}\label{introduction}
+
+\textbf{2022 Nobel Prize for Physics}: for experiments with entangled photons, establishing the violation of Bell inequalities and pioneering quantum information science
+
+Three people won the prize: \begin{itemize}
+\tightlist{}
+    \item
+    Alain Aspect (France)
+    \item
+    John Clauser (the U.S.)
+    \item
+    Anton Zeilinger (Austria)
+\end{itemize}
+
+This brings about the problem of \textbf{local realism (局部现实主义)} and \textbf{principle of locality (定域性原理)}, which is believed true in CLASSICAL mechanics or electromagnetics.
+
+\begin{quote}
+作业：1. 思考：科学哲学上，``真实''是如何定义的？
+\end{quote}
+
+\section{Newtonian Mechanics, 1687 牛顿力学}\label{newtonian-mechanics-1687-ux725bux987fux529bux5b66}
+
+In the \emph{Principia} writes \textbf{the first Principle}: \[\boldsymbol F=\frac{\mathrm d \boldsymbol p} {\mathrm dt}\] and Newton also gives \textbf{the Law of Universal Gravitation}: \[ \boldsymbol F = -\frac{Gm_1m_2}{r^2} \hat {\boldsymbol r}.\]
+
+\section{Some equations 一些公式}\label{some-equations-ux4e00ux4e9bux516cux5f0f}
+
+\begin{itemize}
+\tightlist{}
+    \item
+    Navier-Stokes equations 纳维-斯托克斯方程 \[ {\partial \boldsymbol v \over \partial t} +(\boldsymbol v \cdot \nabla) \boldsymbol v = - {1 \over \rho} \nabla p + \mu \nabla^2 \boldsymbol v + \boldsymbol g\]
+    \item
+    Euler-Lagrange equation 拉格朗日方程 \[{\partial L \over \partial q_\alpha}-{\mathrm d \over \mathrm dt} {\partial L \over \partial \dot q_\alpha}=0, \quad L=T-V\]
+    \item
+    Hamilton Canonical Equations 哈密顿正则方程 \[
+    \left \{
+    \begin{array}{l}
+        \dfrac{\partial H}{\partial p_\alpha}=\dot q_\alpha \\[1.5ex]
+        \dfrac{\partial H}{\partial q_\alpha}=-\dot p_\alpha
+        \end{array}
+    \right.
+    \]
+\end{itemize}
+
+\section{Schrödinger Equation 薛定谔方程}\label{schruxf6dinger-equation-ux859bux5b9aux8c14ux65b9ux7a0b}
+
+\[-{ \hbar^2 \over 2m } \nabla ^2 \psi + U \psi = \mathrm{i} \hbar {\partial \psi \over \partial t}\]
+
+\textbf{Freeman Dyson: Four jokes by Nature}
+
+\begin{itemize}
+\tightlist{}
+\item
+  the square root of minus one that the physicist Erwin Schrödinger put into his wave equation when he invented wave mechanics 被放入薛定谔波函数的-1的平方根
+\item
+  the precise linearity of quantum mechanics, the fact that the possible states of any physical object form a linear space 量子力学的精确线性，即物理对象的所有可能状态构成线性空间
+\item
+  the existence of quasi-crystals 拟晶体的存在
+\item
+  a similarity in behavior between quasi-crystals and the zeros of the Riemann Zeta function 拟晶体和黎曼\(\zeta\)函数在行为上的相似性
+\end{itemize}
+
+\textbf{Maxwell's equations 麦克斯韦方程组}
+
+\[
+\left \{
+    \begin{array} {l} 
+        \nabla \cdot \boldsymbol E = \dfrac{\rho}{\varepsilon_0} \\
+        \nabla \cdot \boldsymbol B = 0 \\
+        \nabla \times \boldsymbol E = -\dfrac{\partial B}{\partial t} \\
+        \nabla \times \boldsymbol B = \mu_0(\boldsymbol j+\varepsilon_0 \dfrac{\partial \boldsymbol E}{ \partial t}) \\
+    \end{array} 
+\right.
+\]
+
+\section{General Relativity 广义相对论}\label{general-relativity-ux5e7fux4e49ux76f8ux5bf9ux8bba}
+
+\textbf{爱因斯坦引力场方程} \[G_{\mu v}=R_{\mu v}-{1\over2}g_{\mu v}R=\frac{4\pi G}{c^4}T_{\mu v}\]
+
+\begin{quote}
+Matter tells space how to curve. Curvature tells matter how to move.
+\end{quote}
+
+\section{Time reversal: A few examples 时间反演性的一些例子}\label{time-reversal-a-few-examples-ux65f6ux95f4ux53cdux6f14ux6027ux7684ux4e00ux4e9bux4f8bux5b50}
+
+When \(t \mapsto -t\): \[\boldsymbol r \mapsto \boldsymbol r\] \[\boldsymbol v = {\mathrm d \boldsymbol r \over \mathrm dt} \mapsto - \boldsymbol v\] \[\boldsymbol a = {\mathrm d \boldsymbol v \over \mathrm dt} \mapsto \boldsymbol a\] \[\cdots\] \[\boldsymbol {U_d} \mapsto -\boldsymbol {U_d} \] \[\boldsymbol j \mapsto - \boldsymbol j\] \[\boldsymbol B \mapsto - \boldsymbol B \]
+
+\subsection*{(1) Lagrangian 拉格朗日量}\label{lagrangian-ux62c9ux683cux6717ux65e5ux91cf}
+
+CPT invariant:
+
+\begin{itemize}
+\tightlist{}
+\item
+  C: Charge Conjugation 电荷共轭变换
+\item
+  P: Parity 空间反射
+\item
+  T: Time Reversal 时间反演
+\end{itemize}
+
+We can conclude from the Maxwell's equations that the Lagrangian remains invariable under CPT changes.
+
+\subsection*{(2) Schrödinger Equation 薛定谔方程}\label{schruxf6dinger-equation-ux859bux5b9aux8c14ux65b9ux7a0b-1} 
+
+\[\psi(\boldsymbol r, t) \mapsto \psi(\boldsymbol r,-t) \quad (*)\] \[t \mapsto -t\] \[\mathrm i \mapsto -\mathrm i\]
+
+It can be seen that whether the Schrödinger equation remains unchanged under time reversal depends on \((*)\).
+
+\subsection*{(3) Euler-Lagrange equation 拉格朗日方程}\label{euler-lagrange-equation-ux62c9ux683cux6717ux65e5ux65b9ux7a0b}
+
+The equation is \[{\mathrm d \over \mathrm dt} {\partial L \over \partial \dot q_\alpha}- {\partial L \over \partial q_\alpha}=0, \quad L= T - V,\] in which \(q_\alpha\) is the \textbf{generalized coordinate} (广义坐标), and \(\dot q_\alpha\) is its \textbf{generalized velocity} (广义速度).
+
+\begin{quote}
+作业：2. 推导哈密顿正则方程 \[
+\left \{
+    \begin{array} {l}
+        \dfrac{\partial H}{\partial p_\alpha}=\dot q_\alpha \\[1.5ex]
+        \dfrac{\partial H}{\partial q_\alpha}=-\dot p_\alpha
+    \end{array}
+\right.
+\] 的时间反演不变性。
+\end{quote}
+
+\section{Hamilton-Jacobian equation 哈密顿-雅可比方程}\label{hamilton-jacobian-equation-ux54c8ux5bc6ux987f-ux96c5ux53efux6bd4ux65b9ux7a0b}
+
+\[S= \int^{t_1}_{t_2} L \mathrm dt\] \[ {\partial S \over \partial t}+H =0\]

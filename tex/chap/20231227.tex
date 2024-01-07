@@ -1,0 +1,513 @@
+\chapter{2023/12/27}\label{20231227}
+
+\section{Dirac equation (1927)
+狄拉克方程}\label{dirac-equation-1927-ux72c4ux62c9ux514bux65b9ux7a0b}
+
+\subsection*{(1) The background to proposing the Dirac equation
+提出狄拉克方程的背景}\label{the-background-to-proposing-the-dirac-equation-ux63d0ux51faux72c4ux62c9ux514bux65b9ux7a0bux7684ux80ccux666f}
+
+Previously, we have the \textbf{Schrödinger Equation}
+\[- { \hbar^2 \over 2m} \nabla^2 \psi + U \psi = \mathrm{i} \hbar {\partial \psi \over \partial t},\]
+which can show quantum behavior but not relativistic effects. It
+contains the first derivative with respect to time and the second
+derivative with respect to space, and thus it does not satisfy Lorentz
+invariance.
+
+Later, there was the Klein-Gordon equation
+\[\left( \frac{1}{c^2} \frac{\partial^2 }{\partial t^2} - \nabla^2 \right) \psi + \left( \frac{m_0c}{\hbar} \right)^2 \psi = 0,\]
+which can show relativistic effects but not quantum behavior.
+
+On this basis, Dirac wanted to put forward an equation containing both
+the first derivative with respect to time and space, thus satisfying
+both Galilean and Lorentz invariance.
+
+\subsection*{(2) Partial derivation
+部分推导}\label{partial-derivation-ux90e8ux5206ux63a8ux5bfc}
+
+We still begin from the momentum and energy operators in quantum
+mechanics:
+\[\hat{\boldsymbol{p}} = - \mathrm{i} \hbar \nabla \quad \text{and} \quad \hat{E} = \mathrm{i} \hbar \frac{\partial}{\partial t}.\]
+
+Noticing that the deformation (变形) of the energy-momentum relation is
+\[E = \sqrt{m_0^2 c^4 + p^2 c^2}, \quad (*)\] and it contains both the
+first derivative with respect to time and space, the only thing left to
+do for Dirac was to extract the root.
+
+Considering that \(\boldsymbol{p} = (p_x, p_y, p_z)\), we can suppose
+the form of the root as
+\[\sqrt{a^2 + b^2 + c^2 + d^2} = \alpha_1 a + \alpha_2 b + \alpha_3 c + \beta d.\]
+This means that
+\[a^2 + b^2 + c^2 + d^2 = \left( \alpha_1 a + \alpha_2 b + \alpha_3 c + \beta d \right)^2,\]
+which leads us to \[\left\{
+    \begin{array}{l}
+        \alpha_i \alpha_j + \alpha_j \alpha_i = 2 \delta_{ij}, \\
+        \alpha_i\beta + \beta\alpha_i = 0, \\
+        \alpha_i^2 = \beta^2 = 1, \\
+    \end{array}
+\right.\] where \(i = 1, 2, 3\).
+
+Obviously, for \(\alpha_1, \alpha_2, \alpha_3, \beta\) to have
+solutions, these should be matrices. Rewrite these, and we get \[\left\{
+    \begin{array}{l}
+        \boldsymbol{\alpha}_i \boldsymbol{\alpha}_j + \boldsymbol{\alpha}_j \boldsymbol{\alpha}_i = 2 \delta_{ij} \mathbf{I}, \\
+        \boldsymbol{\alpha}_i \boldsymbol{\beta} + \boldsymbol{\beta} \boldsymbol{\alpha}_i = \mathbf{0}, \\
+        \boldsymbol{\alpha}_i^2 = \boldsymbol{\beta}^2 = \mathbf{I}. \\
+    \end{array}
+\right.\]
+
+Here we give the solutions of
+\(\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3, \boldsymbol{\beta}\)
+without proof:
+\[\boldsymbol{\beta} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}, \quad \boldsymbol{\alpha}_1 = \begin{pmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \end{pmatrix},\]
+\[\boldsymbol{\alpha}_2 = \begin{pmatrix} 0 & 0 & 0 & - \mathrm{i} \\ 0 & 0 & \mathrm{i} & 0 \\ 0 & - \mathrm{i}& 0 & 0 \\ \mathrm{i} & 0 & 0 & 0 \end{pmatrix}, \quad \boldsymbol{\alpha}_3 = \begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & -1 \\ 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \end{pmatrix}.\]
+
+And the equation \((*)\) becomes
+\[\mathrm{i} \hbar \frac{\partial \psi}{\partial t} = \left( - \mathrm{i} \hbar \boldsymbol{\boldsymbol{\alpha}} \cdot \nabla c + \boldsymbol{\beta} mc^2 \right) \psi,\]
+where
+\(\boldsymbol{\alpha} = (\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3)\).
+This is the form of Dirac equation. And in natural units, with Feynman
+slash notation, we get \[(i\partial \!\!\!/ - m) \psi = 0.\]
+
+This equation can reflect both relativistic and quantum effects, and is
+considered one of the most beautiful formulas in theoretical physics.
+
+\section{Hamilton-Jacobi equation
+哈密顿-雅克比方程}\label{hamilton-jacobi-equation-ux54c8ux5bc6ux987f-ux96c5ux514bux6bd4ux65b9ux7a0b}
+
+\subsection*{(1) Derivation 推导}\label{derivation-ux63a8ux5bfc-2}
+
+Suppose that we have generalized coordinates \(q_1, q_2, \dots, q_s\).
+
+We already know the Lagrangian \(L(q_j, \dot{q}_j, t)\) and the
+Hamiltonian action (哈密顿作用量)
+\(S[q(t)] = \int_{t_1}^{t_2} L(q_j, \dot{q}_j, t) \mathrm{d}t\), which
+is a functional (泛函) of \(q\).
+
+Maupertuis's principle (莫培督原理) states that the Hamiltonian action
+\[S = \int \boldsymbol{p} \cdot \mathrm{d} \boldsymbol{q}.\]
+
+Take the total derivative of \(S\) with respect to time, and we get
+\[\frac{\mathrm{d}S}{\mathrm{d}t} = \frac{\partial S}{\partial t} + \sum_{j = 1}^{s} \frac{\partial S}{\partial q_j} \dot{q}_j = \frac{\partial S}{\partial t} + \sum_{j = 1}^{s} p_j \dot{q}_j.\]
+
+Also, because \(\mathrm{d}S = L \mathrm{d}t\) according to the
+definition of \(S\), we know that
+\[L = \frac{\mathrm{d}S}{\mathrm{d}t} = \frac{\partial S}{\partial t} + \sum_{j = 1}^{s} p_j \dot{q}_j,\]
+\[\frac{\partial S}{\partial t} + \sum_{j = 1}^{s} p_j \dot{q}_j - L = 0,\]
+\[\frac{\partial S}{\partial t} + H = 0.\]
+
+Also, from above we know that
+\(\displaystyle p = \frac{\partial S}{\partial q_j}\), and expressing
+the Hamiltonian as
+\(\displaystyle H = H \left( q_j, \frac{\partial S}{\partial q_j}, t \right)\),
+we get the Hamilton-Jacobi equation:
+
+\[\frac{\partial S}{\partial t} + H \left( q_j, \frac{\partial S}{\partial q_j}, t \right) = 0.\]
+
+\subsection*{(2) Deriving SHO using the Hamilton-Jacobi equation
+用哈密顿-雅克比方程推导简谐振子}\label{deriving-sho-using-the-hamilton-jacobi-equation-ux7528ux54c8ux5bc6ux987f-ux96c5ux514bux6bd4ux65b9ux7a0bux63a8ux5bfcux7b80ux8c10ux632fux5b50}
+
+The Hamiltonian of the SHO is
+\[H = \frac{p^2}{2m} + \frac{1}{2} kx^2 = \frac{1}{2m} \left( \frac{\partial S}{\partial x} \right)^2 + \frac{1}{2} \omega^2 x^2 = E. \quad (1)\]
+
+From the Hamilton-Jacobi equation, we can get
+\[\frac{\partial S}{\partial t} = - H = - E.\]
+
+Adding a function \(W(E, x)\) which does not depend on \(t\), we get
+\[S(x, E, t) = - Et + W(E, x). \quad (2)\]
+
+Using \((1)\), we get
+\[\frac{\partial S}{\partial x} = \sqrt{2m \left( E - \frac{1}{2}m \omega^2 x^2 \right)};\]
+and using \((2)\), we get
+\[\frac{\partial S}{\partial x} = \frac{\mathrm{d}W}{\mathrm{d}x},\] and
+we get
+\[\frac{\mathrm{d}W}{\mathrm{d}x} = \sqrt{2m \left( E - \frac{1}{2}m \omega^2 x^2 \right)},\]
+\[\mathrm{d}W = \sqrt{2m \left( E - \frac{1}{2}m \omega^2 x^2 \right)} \mathrm{d}x.\]
+
+Take the partial differential with respect to \(E\), and we get
+\begin{align*}
+    \frac{\partial W}{\partial E} & = \sqrt{2m} \int \frac{\mathrm{d}x}{2 \sqrt{E - \dfrac{1}{2}m \omega^2 x^2}} \\
+    & = \sqrt{\frac{m}{2E}} \int \frac{\mathrm{d}x}{\sqrt{1 - \dfrac{m \omega^2 x^2}{2E}}} \\
+    & = \sqrt{\frac{m}{2E}} \sqrt{\frac{2E}{m \omega^2}} \arcsin \left( \sqrt{\frac{m \omega^2}{2E}} x \right) \\
+    & = \frac{1}{\omega} \arcsin \left( \sqrt{\frac{m \omega^2}{2E}} x \right).
+\end{align*}
+
+According to dimensional analysis, we have
+\[\frac{\partial W}{\partial E} - t = \tau,\]
+\[\frac{\partial W}{\partial E} = t + \tau = \frac{1}{\omega} \arcsin \left( \sqrt{\frac{m \omega^2}{2E}} x \right),\]
+\[x = \sqrt{\frac{2E}{m \omega^2}} \sin \left( \omega t + \varphi_0 \right),\]
+where \(\varphi_0 = \omega \tau\).
+
+\section{Poisson bracket
+泊松括号}\label{poisson-bracket-ux6ccaux677eux62ecux53f7}
+
+\subsection*{(1) Definition 定义}\label{definition-ux5b9aux4e49-2}
+
+In phase space, we define the Poisson brackets: If we have two functions
+\(f(p_j, q_j, t)\) and \(g(p_j, q_j, t)\), then
+\[[f, g] = \sum_{j = 1}^{s} \left( \frac{\partial f}{\partial q_j} \frac{\partial g}{\partial p_j} - \frac{\partial f}{\partial p_j} \frac{\partial g}{\partial q_j} \right).\]
+
+Note that many sources also write the Poisson brackets with curly brackets $\{\}$. 
+
+For a random function \(f(p_j, q_j, t)\), we can take the derivative
+with respect to time:
+\[\frac{\mathrm{d}f}{\mathrm{d}t} = \frac{\partial f}{\partial t} + \sum_{j = 1}^{s} \left( \frac{\partial f}{\partial q_j} \dot{q}_j + \frac{\partial f}{\partial p_j} \dot{p}_j \right).\]
+
+Substitute the Hamiltonian
+\(\left\{  \begin{array} {l}  \dfrac{\partial H}{\partial p_j}=\dot q_j \\[1.5ex]  \dfrac{\partial H}{\partial q_j}=-\dot p_j  \end{array} \right.\)
+in, and we get
+\[\frac{\mathrm{d}f}{\mathrm{d}t} = \frac{\partial f}{\partial t} + \sum_{j = 1}^{s} \left( \frac{\partial f}{\partial q_j} \dfrac{\partial H}{\partial p_j} - \frac{\partial f}{\partial p_j} \dfrac{\partial H}{\partial q_j} \right) = \frac{\partial f}{\partial t} + [f, H].\]
+
+On the occasion that \(f\) does not depend on \(t\), then
+\(\dfrac{\partial f}{\partial t} = 0\), and thus
+\(\dfrac{\mathrm{d}f}{\mathrm{d}t} = [f, H]\).
+
+\subsection*{(2) Proving Liouville's theorem using
+刘维尔定理}\label{proving-liouvilles-theorem-using-ux5218ux7ef4ux5c14ux5b9aux7406}
+
+An equivalent formulation of Liouville's theorem is that
+\(\rho(q_j, p_j)\), which is the density of phase points at some point
+\((q_j, p_j)\) is conserved, or, in mathematical form,
+\[\frac{\mathrm{d} \rho}{\mathrm{d}t} = 0.\]
+
+Take the total derivative of \(\rho\), and we get \begin{align*}
+    0 = \frac{\mathrm{d} \rho}{\mathrm{d}t} & = \frac{\partial \rho}{\partial t} + \sum_{j = 1}^{s} \left( \frac{\partial \rho}{\partial q_j} \dot{q}_j + \frac{\partial \rho}{\partial p_j} \dot{p}_j \right) \\
+    & = \frac{\partial \rho}{\partial t} + \sum_{j = 1}^{s} \left( \frac{\partial \rho}{\partial q_j} \dfrac{\partial H}{\partial p_j} - \frac{\partial \rho}{\partial p_j} \dfrac{\partial H}{\partial q_j} \right) \\
+    & = \frac{\partial \rho}{\partial t} + [\rho, H].
+\end{align*}
+
+From this, we know an equivalent formulation of Liouville's theorem:
+\[\frac{\partial \rho}{\partial t} + [\rho, H] = 0.\]
+
+\subsection*{(3) Properties 性质}\label{properties-ux6027ux8d28}
+
+There are several properties of the Poisson bracket:
+
+\begin{itemize}
+\tightlist{}
+\item
+  \([f, g] = - [g, f]\);
+\item
+  \([f, f] = 0\) and \([f, c] = 0\) where \(c = \mathrm{const}\);
+\item
+  \([f_1 + f_2, g] = [f_1, g] + [f_2, g]\);
+\item
+  \([f_1 f_2, g] = f_1 [f_2, g] + f_2 [f_1, g]\);
+\item
+  \(\displaystyle \frac{\partial}{\partial t} [f, g] = [\frac{\partial f}{\partial t}, g] + [f, \frac{\partial g}{\partial t}]\);
+\item
+  \([q_j, q_j] = [p_j, p_j] = 0\) and \([q_j, p_k] = \delta_{jk}\);
+\item
+  \([f, [g, h]] + [g, [h, f]] + [h, [f, g]] = 0\).
+\end{itemize}
+
+\section{Conclusion and summing up 总结和回顾}\label{conclusion-ux7ed3ux8bba}
+
+\subsection*{(1) ``One''s:}\label{ones}
+
+\begin{itemize}
+\tightlist{}
+\item
+  One center: the beauty of classical mechanics
+\item
+  One main line: the multiple ways to derive the Simple Harmonic
+  Oscillator (SHO)
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    \(\displaystyle \frac{\mathrm{d}E}{\mathrm{d}t} = 0\)
+  \item
+    the Euler-Lagrange equation
+  \item
+    the Hamiltonian canonical equations
+  \item
+    Series expansion
+  \item
+    Relativistic oscillator (time dilation)
+  \item
+    Quantum harmonic oscillator
+  \item
+    Torsional pendulum
+  \item
+    Physical pendulum
+  \end{itemize}
+\end{itemize}
+
+\subsection*{(2) ``Two''s:}\label{twos}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Two parts:
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    Newtonian mechanics
+  \item
+    Analytical mechanics
+
+    \begin{itemize}
+\tightlist{}
+    \item
+      Lagrangian mechanics
+    \item
+      Hamiltonian mechanics
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\subsection*{(3) ``Three''s:}\label{threes}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Three geometries:
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    Euclidean geometry
+  \item
+    Riemann geometry
+  \item
+    Symplectic geometry
+  \end{itemize}
+\end{itemize}
+
+\subsection*{(4) ``Four''s:}\label{fours}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Four transformations:
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    Galilean transformation
+  \item
+    Legendre transformation
+  \item
+    Lorentz transformation
+  \item
+    Gauge transformation
+  \end{itemize}
+\item
+  Four basic properties of classical field theory
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    The divergence of the curl of any vector field is equal to zero
+  \item
+    The curl of the gradient of any scalar field is always the zero
+    vector field
+  \item
+    ``Back Cab''
+  \item
+    Product operation of Levi-Civita symbols
+  \end{itemize}
+\item
+  Four conserved quantities
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    Energy
+  \item
+    Momentum
+  \item
+    Angular momentum
+  \item
+    Laplace--Runge--Lenz vector
+  \end{itemize}
+\item
+  Four major spaces
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    Euclidean space
+  \item
+    Configuration space
+  \item
+    Phase space
+  \item
+    Minkowski space-time
+  \end{itemize}
+\item
+  Four invariances
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    Galilean invariance
+  \item
+    Gauge invariance
+  \item
+    Lorentz invariance
+  \item
+    Time reversal invariance
+  \end{itemize}
+\end{itemize}
+
+\subsection*{(5) ``Five''s:}\label{fives}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Five principles
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    The principle of least action
+  \item
+    Heisenberg's uncertainty principle
+  \item
+    Virtual work principle
+  \item
+    D'Alembert's principle
+  \item
+    Maupertuis's principle
+  \end{itemize}
+\end{itemize}
+
+\subsection*{(6) ``Six''s:}\label{sixs}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Six major paradoxes
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    Zeno's paradoxes
+  \item
+    Newton's bucket argument
+  \item
+    Elevator paradox
+  \item
+    Twin paradox
+  \item
+    Bell's spaceship paradox
+  \item
+    Ehrenfest paradox
+  \end{itemize}
+\end{itemize}
+
+\subsection*{(7) ``Seven''s:}\label{sevens}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Seven laws
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    Newton's laws of motion (3)
+  \item
+    Kepler's laws of planetary motion (3)
+  \item
+    Hooke's law
+  \end{itemize}
+\end{itemize}
+
+\subsection*{(8) ``Eight''s:}\label{eights}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Eight major groups
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    SO(2)
+  \item
+    Abel group
+  \item
+    Lie group
+  \item
+    Galilean group
+  \item
+    Poincaré group
+  \item
+    Lorentz group
+  \item
+    Space-time translation group
+  \item
+    Unitary group U(1)
+  \end{itemize}
+\end{itemize}
+
+\subsection*{(9) ``Nine''s:}\label{nines}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Nine major equations
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    Newton's second law of motion
+    \(\displaystyle \boldsymbol{F} = \frac{\mathrm{d}p}{\mathrm{d}t}\)
+  \item
+    Maxwell's equations
+  \item
+    Euler--Lagrange equation
+  \item
+    Hamilton's canonical equation
+  \item
+    Hamilton--Jacobi equation
+  \item
+    Navier--Stokes equations
+  \item
+    Bernoulli's equation
+  \item
+    Schrödinger equation
+  \item
+    Klein--Gordon equation
+  \end{itemize}
+\end{itemize}
+
+\subsection*{(10) ``Ten''s:}\label{tens}
+
+\begin{itemize}
+\tightlist{}
+\item
+  Top ten theorems
+
+  \begin{itemize}
+\tightlist{}
+  \item
+    Noether's theorem
+  \item
+    Virial theorem
+  \item
+    Euler's homogeneous function theorem
+  \item
+    Liouville's theorem
+  \item
+    Transport theorem in a rotation system
+  \item
+    Intermediate axis theorem
+  \item
+    Angular Momentum Theorem
+  \item
+    König's theorem (柯尼希定理)
+  \item
+    Gauss's divergence theorem
+  \item
+    Stokes' theorem
+  \end{itemize}
+\end{itemize}
+
+\section{Professor Zhao's words
+赵爹寄语}\label{professor-zhaos-words-ux8d75ux7239ux5bc4ux8bed}
+
+长江后浪推前浪，世上新人赶旧人。

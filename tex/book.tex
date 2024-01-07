@@ -1,0 +1,115 @@
+\documentclass[openany]{book}
+
+% 字体设置
+\usepackage[no-math]{fontspec}
+\usepackage{noto}
+\usepackage[UTF8]{ctex}
+\setCJKmainfont{Noto Serif SC}[ItalicFont=方正仿宋_GBK]
+\setCJKmathfont{Noto Serif SC}[ItalicFont=方正仿宋_GBK]
+
+% 数学输入
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{esint}
+\usepackage{tikz}
+\usepackage{latexsym}
+
+% 表格
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{caption}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% 排版设置
+\usepackage{geometry}[b5paper]
+
+% 超链接
+\usepackage{hyperref}
+\urlstyle{rm}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black,
+    bookmarks=true,
+    bookmarksopen=true,
+    bookmarksnumbered=true,
+}
+
+% 将中文标注转换回英文
+\renewcommand{\contentsname}{Contents 目录}
+\renewcommand{\figurename}{Fig}
+\renewcommand{\tablename}{Table}
+\renewcommand{\appendixname}{Appendix}
+
+% 标题和作者设置
+\title{\LARGE{Notes on Professor Zhao Yapu's Lectures on}\\\Huge{Mechanics}\\赵亚溥{ }\textbf{力学}{ }课程笔记}
+\author{Chen Yumeng}
+\date{December 2023}
+
+% ------------------ 正文开始 ------------------
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+\thispagestyle{empty}
+\null
+
+\input{chap/foreword}
+\setcounter{page}{1}
+
+\tableofcontents
+
+\input{chap/copyright}
+
+\input{chap/release_notes}
+
+\mainmatter
+
+\input{chap/20230911}
+\input{chap/20230913}
+\input{chap/20230918}
+\input{chap/20230920}
+\input{chap/20230925}
+\input{chap/20230927}
+\input{chap/20231009}
+\input{chap/20231011}
+\input{chap/20231016}
+\input{chap/20231018}
+\input{chap/20231023}
+\input{chap/20231025}
+\input{chap/20231030}
+\input{chap/20231101}
+\input{chap/20231106}
+\input{chap/20231108}
+\input{chap/20231113}
+\input{chap/20231115}
+\input{chap/20231120}
+\input{chap/20231122}
+\input{chap/20231127}
+\input{chap/20231129}
+\input{chap/20231204}
+\input{chap/20231206}
+\input{chap/20231211}
+\input{chap/20231213}
+\input{chap/20231218}
+\input{chap/20231220}
+\input{chap/20231225}
+\input{chap/20231227}
+
+\appendix % 附录
+
+\newpage
+\addcontentsline{toc}{chapter}{Appendix 附录}
+
+\input{chap/Sciphy}
+\input{chap/VirtualDisplacement}
+
+\backmatter % 后记部分
+
+\input{chap/epilogue}
+
+\end{document}

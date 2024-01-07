@@ -1,0 +1,146 @@
+\chapter{2023/11/22}\label{20231122}
+
+\begin{quote}
+作业：查咖啡环效应、``葡萄酒的眼泪''是什么
+\end{quote}
+
+\emph{将拉格朗日力学用于爱情，则 \(L = T - V\) 中， \(T\) 对应干劲，而
+\(S\) 表示气场。气场的来源则可能是财力、官阶\ldots\ldots{}}
+
+\section{Features of classical mechanics
+经典力学的特性}\label{features-of-classical-mechanics-ux7ecfux5178ux529bux5b66ux7684ux7279ux6027}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{Person} & \textbf{Year} & \textbf{Main Work} & \textbf{Space} & \textbf{Geometry} \\
+        \hline
+        Newton & 1687 & \textit{the Principia} & Euclidean Space & Euclidean Geometry \\ 
+        &  & 《自然哲学的数学原理》 & (欧氏空间) & (欧氏几何) \\
+        \hline
+        Lagrange & 1788 & Analytical mechanics & Configuration Space & Riemannian geometry \\ 
+        &  & (分析力学) & (位形空间) & (黎曼几何) \\
+        \hline
+        Hamilton & 1834 & Analytical mechanics & Phase Space & Symplectic geometry \\ 
+        &  & (分析力学) & (相空间) & (辛几何) \\
+        \hline
+    \end{tabular}
+    \captionof{table}{Comparison between classical mechanics}
+\end{center}
+
+\emph{拉格朗日把欧拉视为他的``学术导师''，故
+\(\displaystyle {\mathrm d \over \mathrm dt} {\partial L \over \partial \dot x}- {\partial L \over \partial x}=0\)
+有欧拉-拉格朗日方程之名。}
+
+\section[Galilean transformation in Lagrangian mechanics]{Galilean transformation in Lagrangian mechanics
+拉格朗日力学中的伽利略变换}\label{galilean-transformation-in-lagrangian-mechanics-ux62c9ux683cux6717ux65e5ux529bux5b66ux4e2dux7684ux4f3dux5229ux7565ux53d8ux6362}
+
+\subsection*{(1) The principle of least action
+最小作用量原理}\label{the-principle-of-least-action-ux6700ux5c0fux4f5cux7528ux91cfux539fux7406}
+
+1744, Maupertuis (莫培督) proposed \textbf{action (作用量, later known
+as Hamiltonian action 哈密顿作用量)}:
+\[S = \int L(q, \dot{q}, t) \mathrm{d} t.\]
+
+In a mechanical system, we suppose that at instances \(t_1\) and
+\(t_2\), the position of coordinates are respectively \(q^{(1)}\) and
+\(q^{(2)}\). The condition is that the system shall move between these
+positions in a way that the integral
+\(\displaystyle S = \int_{t_1}^{t_2} L(q, \dot{q}, t) \mathrm{d} t\)
+takes the least possible value.
+
+This means that \(\delta q(t_1) = \delta q(t_2) = 0\).
+
+At such a place, we have \(\delta S = 0.\)
+
+Let \(L' = L + \dfrac{\mathrm{d}f}{\mathrm{d}t}\) where \(f = f(q, t)\),
+and we get
+\[S' = \int_{t_1}^{t_2} \left[ L(q, \dot{q}, t) + \dfrac{\mathrm{d}f(q, t)}{\mathrm{d}t} \right] \mathrm{d}t = S + f(q, t) \Big|_{t_1}^{t_2}\]
+
+\subsection*{(2) Galilean transformation
+伽利略变换}\label{galilean-transformation-ux4f3dux5229ux7565ux53d8ux6362}
+
+In a Galilean transformation
+\(\left\{\begin{array}{l}  \boldsymbol{r}' = \boldsymbol{r} - \boldsymbol{V}t \\  t' = t \end{array} \right.\)
+where we assume that the potential energy \(U(q)\) is unchanged, we have
+\(\boldsymbol{v}' = \boldsymbol{v} - \boldsymbol{V}\), and
+\begin{align*}
+    L' = T' - U' & = {1 \over 2}m \boldsymbol{v}' \cdot \boldsymbol{v}' - U \\
+    & = {1 \over 2}m \left( \boldsymbol{v} - \boldsymbol{V} \right) \cdot \left( \boldsymbol{v} - \boldsymbol{V} \right) - U \\
+    & = {1 \over 2}m \boldsymbol{v} \cdot \boldsymbol{v} - m \boldsymbol{v} \cdot \boldsymbol{V} + {1 \over 2}m \boldsymbol{V} \cdot \boldsymbol{V} - U \\
+    & = T - m \dfrac{\mathrm{d} \boldsymbol{r}}{\mathrm{d}t} \cdot \boldsymbol{V} + {1 \over 2} mV^2 - U \\
+    & = L - m \dfrac{\mathrm{d}}{\mathrm{d}t} \left( \boldsymbol{r} \cdot \boldsymbol{V} - {1 \over 2}V^2 t \right).
+\end{align*}
+
+This means that under Galilean transformations, the Lagrangian \(L\)
+stays equivalent.
+
+\section{Gauge Invariance 规范不变性
+(考！)}\label{gauge-invariance-ux89c4ux8303ux4e0dux53d8ux6027-ux8003}
+
+\subsection*{(1) Basic forms of gauge transformation
+规范场变换的基本形式}\label{basic-forms-of-gauge-transformation-ux89c4ux8303ux573aux53d8ux6362ux7684ux57faux672cux5f62ux5f0f}
+
+For this part, please refer to the notes on 2023/10/16.
+
+\subsection*{(2) Gauge invariance in magnetic fields
+电磁场中的规范不变性}\label{gauge-invariance-in-magnetic-fields-ux7535ux78c1ux573aux4e2dux7684ux89c4ux8303ux4e0dux53d8ux6027}
+
+In a magnetic field with electric field (电场) \(\boldsymbol{E}\) and
+electric potential (电势) \(\varphi\) we have the electromagnetic force
+(电磁力) \begin{align*}
+    \boldsymbol{F} & = q \left( \boldsymbol{E} + \boldsymbol{v} \times \boldsymbol{B} \right) \\
+    & = q \left[ - \nabla \varphi - \dfrac{\partial \boldsymbol A }{\partial t} + \boldsymbol{v} \times \left( \nabla_{\boldsymbol{A}} \times \boldsymbol{A} \right) \right] \\
+    & = q \left[ - \nabla \varphi - \dfrac{\partial \boldsymbol A }{\partial t} + \nabla_{\boldsymbol{A}} \left( \boldsymbol{v} \cdot \boldsymbol{A} \right) - \left( \boldsymbol{v} \cdot \nabla_{\boldsymbol{A}} \right) \boldsymbol{A} \right] \\
+    & = q \left[ - \nabla \left( \varphi - \boldsymbol{v} \cdot \boldsymbol{A} \right) - \dfrac{\partial \boldsymbol A }{\partial t} - \left( \boldsymbol{v} \cdot \nabla_{\boldsymbol{A}} \right) \boldsymbol{A} \right] \\
+    & = q \left( - \nabla U' - \dfrac{\mathrm{d} \boldsymbol{A}}{\mathrm{d}t} \right),
+\end{align*} where \(\nabla_{\boldsymbol{A}}\) means the operator
+\(\nabla\) operates exclusively on \(\boldsymbol{A}\).
+
+(Here you should note that
+\(\displaystyle {\partial \over \partial t} + \boldsymbol{v} \cdot \nabla = \frac{\mathrm{d}}{\mathrm{d}t}\).)
+
+So the Lagrangian in the original field is
+\[L = {1 \over 2} mv^2 - q(\varphi - \boldsymbol{v} \cdot \boldsymbol{A}),\]
+and after the gauge transformation, we get \begin{align*}
+    L' & = {1 \over 2} m v^2 - q(\varphi' - \boldsymbol{v} \cdot \boldsymbol{A}') \\
+    & = {1 \over 2} m v^2 - q \left[ \varphi - {\partial \psi \over \partial t} - \boldsymbol{v} \cdot \left( \boldsymbol{A} + \nabla \psi \right) \right] \\
+    & = {1 \over 2} m v^2 - q(\varphi - \boldsymbol{v} \cdot \boldsymbol{A}) - q \left( {\partial \psi \over \partial t} + (\boldsymbol{v} \cdot \nabla) \psi \right) \\
+    & = L - q \frac{\mathrm{d} \psi}{\mathrm{d}t} \\
+    & = L - \frac{\mathrm{d}}{\mathrm{d}t} (q \psi).
+\end{align*}
+
+Because \(- \dfrac{\mathrm{d}}{\mathrm{d}t} (q \psi)\) is a function of
+\(q\) and \(t\), we can see that after a gauge transformation, the
+Lagrangian stays equivalent (等价的) to before. That is to say, after
+gauge transformations the principle of least action still holds, and we
+call this feature \textbf{gauge invariance (规范不变性)}.
+
+\section{Isochronic variation
+等时变分}\label{isochronic-variation-ux7b49ux65f6ux53d8ux5206}
+
+\emph{译者注：isochronic
+variation这个翻译未经验证，不一定准确，仅供参考！}
+
+The key information here is: \[\delta t = 0.\]
+
+We can assume that \(\mathrm{d}\) and \(\partial\) can exchange
+themselves --- that is,
+\[\delta \left( \dfrac{\mathrm{d}x}{\mathrm{d}t} \right) = \dfrac{\mathrm{d} (\delta x)}{\mathrm{d}t}.\]
+
+Let
+\begin{align*} \delta \left( \dfrac{\mathrm{d}x}{\mathrm{d}t} \right) & = \dfrac{ \delta (\mathrm{d} x) \mathrm{d} t - \mathrm{d} x \delta (\mathrm{d} t)}{\mathrm{d} t^2} \\
+    & = \dfrac{\mathrm{d} (\delta x) \mathrm{d} t}{\mathrm{d} t^2} - \dfrac{\mathrm{d} x \delta (\mathrm{d}t)}{\mathrm{d} t^2} \\
+    & = \dfrac{\mathrm{d} (\delta x)}{\mathrm{d} t},
+\end{align*} we can see that
+\(\delta (\mathrm{d}t) = \mathrm{d} (\delta t) = 0\).
+
+\[\delta q(t_1) = \delta q(t_2) = 0.\]
+
+\emph{下面的部分内容与上方似乎无关。}
+
+The Riemann metric tensor (黎曼度规张量) is \(\mathbf{g}\), and
+\(\mathbf{g} = (g_{ij})\), where
+\[g_{ij} = \dfrac{\partial \boldsymbol{r}_\alpha}{\partial q_i} \cdot \dfrac{\partial \boldsymbol{r}_\alpha}{\partial q_j},\]
+and in Riemann geometry we have
+\[a_{ij} = \sum_{\alpha} m_\alpha \dfrac{\partial \boldsymbol{r}_\alpha}{\partial q_i} \cdot \dfrac{\partial \boldsymbol{r}_\alpha}{\partial q_j} = \sum_{\alpha} m_\alpha g_{ij}.\]

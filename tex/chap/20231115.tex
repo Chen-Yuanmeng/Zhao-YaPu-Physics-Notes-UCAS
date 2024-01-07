@@ -1,0 +1,205 @@
+\chapter{2023/11/15}\label{20231115}
+
+\section{Mechanical similarity
+力学相对性}\label{mechanical-similarity-ux529bux5b66ux76f8ux5bf9ux6027}
+
+From \emph{Mathematical Method in Classical Mechanics} by Vladimir
+Igorevich Arnold (Russian: Влади́мир И́горевич Арно́льд,
+中文：弗拉基米尔·伊戈列维奇·阿诺尔德).
+
+\emph{上面这个人在19岁（1957年）时解决了希尔伯特第十三问题，名满天下！要向他学习！}
+
+\begin{quote}
+作业1：什么是希尔伯特第十三问题？是何时解决的？
+
+答案：希尔伯特第十三问题是：\(f^7 + x f^3 +y f^2 + zf + 1 = 0\)
+这个方程式的七个解\(f\)，若表成\(x, y, z\)的函数，是否可以化成两个变量函数的组合
+\(f \circ g\)。
+
+1957年，阿诺尔德解决了这个问题，答案是``是''。
+\end{quote}
+
+\begin{quote}
+作业2：为什么所有动物跳的高度都是同一量级？
+\end{quote}
+
+Assume that a potential energy in a system
+\(U(\boldsymbol{r}_1, \boldsymbol{r}_2, \dots, \boldsymbol{r}_n)\) is a
+homogeneous function of degree \(k\). This means that
+\[U(\alpha \boldsymbol{r}_1, \alpha \boldsymbol{r}_2, \dots, \alpha \boldsymbol{r}_n) = \alpha^k U(\boldsymbol{r}_1, \boldsymbol{r}_2, \dots, \boldsymbol{r}_n).\]
+
+Thus the Lagrangian (拉格朗日量) \(L\) is
+\[L = T - U = \sum_{n} {1 \over 2} m {\mathrm{d} \boldsymbol{r}_i \over \mathrm{d} t} \cdot {\mathrm{d} \boldsymbol{r}_i \over \mathrm{d} t} - U(\boldsymbol{r}_1, \boldsymbol{r}_2, \dots, \boldsymbol{r}_n).\]
+
+\begin{quote}
+作业3：为什么拉格朗日量 \(L = T - U\)？
+\end{quote}
+
+Let \(\boldsymbol{r}_1' = \alpha \boldsymbol{r}_1\), \(t' = \beta t\),
+and
+\[L' = T' - U' = \left( {\alpha \over \beta} \right)^2 T - \alpha^k U.\]
+
+To let the Euler--Lagrange equation
+\[\frac{\partial L}{\partial q} - \frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial L}{\partial \dot q} = 0\]
+still hold, we need \[\left( {\alpha \over \beta} \right)^2 = \alpha^k\]
+or \[{t' \over t} = \left( {l' \over l} \right)^{1 - k/2}.\]
+
+Following this we can know some other physical quantities, for example:
+\[{E' \over E} = {U' \over U} = \alpha^k;\]
+\[{\boldsymbol{v}' \over \boldsymbol{v}} = {l'/t' \over l/t} = {\alpha \over \beta} = \alpha^{k/2};\]
+\[{\boldsymbol{L}' \over \boldsymbol{L}} = {mv'l' \over mvl} = {\alpha^2 \over \beta} = \alpha^{1 + k/2}.\]
+
+Some applications of this include:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  In the universal gravity field, \(k = -1\), and
+  \[{t' \over t} = \left( {l' \over l} \right)^{3/2},\] which is in
+  accordance with \textbf{Kepler's Third Law (开普勒第三定律)}.
+\item
+  For a string, \(k = 2\), and
+  \[{t' \over t} = \left( {l' \over l} \right)^{0} = 1,\] which means
+  that the period \(T\) is independent of the amplitude of the string
+  \(A\).
+\end{enumerate}
+
+\begin{quote}
+作业4：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  质量不同势能相同的质点沿着相同轨道运动，它们的运动时间满足什么关系？
+
+  答案：\[{t' \over t} = \sqrt{m' \over m}\]
+\item
+  质点有相同的质量但势能相差一个常数因子，试求沿着相同轨道运动的时间之比？
+
+  答案：\[{t' \over t} = \sqrt{U \over U'}\]
+\end{enumerate}
+\end{quote}
+
+\begin{quote}
+作业5：使用量纲分析多米诺骨牌倒下用时与相关物理量的关系
+\end{quote}
+
+From Newton's second law of motion, we know that
+\[\boldsymbol{F} = \dfrac{\mathrm{d} \boldsymbol{p}}{\mathrm{d}t}.\]
+
+Under a potential field \(U\), we have
+\[\boldsymbol{F} = - {\partial U \over \partial q}\] and
+\[\boldsymbol{p} = {\partial T \over \partial \dot{q}},\] and
+consequently,
+\[- {\partial U \over \partial q} = \dfrac{\mathrm{d}}{\mathrm{d}t} {\partial T \over \partial \dot{q}}.\]
+
+Because \(U = U(q_1, q_2, \dots, q_n)\) and
+\(T = T(\dot{q}_1, \dot{q}_2, \dots, \dot{q}_n)\), we have
+\[{\partial U \over \partial \dot{q}} = 0\] and
+\[{\partial T \over \partial q} = 0.\]
+
+From these we can have
+\[{\partial (T - U) \over \partial q} - \dfrac{\mathrm{d}}{\mathrm{d}t} {\partial (T - U) \over \partial \dot{q}} = 0,\]
+\[{\partial L \over \partial q} - \dfrac{\mathrm{d}}{\mathrm{d}t} {\partial L \over \partial \dot{q}} = 0.\]
+
+\section{Euler's equations in rigid body dynamics
+刚体运动的欧拉方程}\label{eulers-equations-in-rigid-body-dynamics-ux521aux4f53ux8fd0ux52a8ux7684ux6b27ux62c9ux65b9ux7a0b}
+
+\begin{quote}
+作业6：拉格朗日量 \(L\) 为什么不写成 \(\ddot q\) 的函数？
+\end{quote}
+
+According to the angular momentum theorem (角动量定理), we have
+\[\dfrac{\mathrm d \boldsymbol L}{\mathrm dt} = \boldsymbol M,\] where
+\(\boldsymbol M\) is the external torque (外力矩) and
+\(\boldsymbol L = \mathbf I \boldsymbol \omega\).
+
+According to the transport theorem,
+\[\dfrac{\mathrm d \boldsymbol L}{\mathrm dt} = \left[ \dfrac{\mathrm d (\mathbf I \boldsymbol \omega)}{\mathrm dt}\right]_r + \boldsymbol \omega \times (\mathbf I \boldsymbol \omega) = \boldsymbol M.\]
+
+Because \(\mathbf I\) is a constant, we have
+\[\mathbf I \left( \dfrac{\mathrm d \boldsymbol \omega}{\mathrm dt} \right)_r + \begin{vmatrix}
+    \hat i & \hat j & \hat k \\
+    \omega_1 & \omega_2 & \omega_3 \\
+    \mathrm I_{11} \omega_1 & \mathrm I_{22} \omega_2 & \mathrm I_{33} \omega_3 \\
+\end{vmatrix} =
+\begin{pmatrix}
+    M_1 \\ M_2 \\ M_3
+\end{pmatrix}.\]
+
+In orthogonal principal axes of inertia coordinates, the equations
+become \[\left\{
+    \begin{aligned}
+        \mathrm I_{11} \dfrac{\mathrm d \boldsymbol \omega_1}{\mathrm dt} + (\mathrm I_{33} - \mathrm I_{22}) \omega_2 \omega_3 & = M_1; \\
+        \mathrm I_{22} \dfrac{\mathrm d \boldsymbol \omega_2}{\mathrm dt} + (\mathrm I_{11} - \mathrm I_{33}) \omega_1 \omega_3 & = M_2; \\
+        \mathrm I_{33} \dfrac{\mathrm d \boldsymbol \omega_3}{\mathrm dt} + (\mathrm I_{22} - \mathrm I_{11}) \omega_1 \omega_2 & = M_3.
+    \end{aligned}
+\right.\]
+
+\section{Intermediate axis theorem
+中间轴定理}\label{intermediate-axis-theorem-ux4e2dux95f4ux8f74ux5b9aux7406}
+
+\begin{quote}
+作业7：查一下礼炮七号发生的事故
+\end{quote}
+
+\emph{酒泉卫星发射中心：向航天强国奋力迈进}
+
+The intermediate axis theorem is also called the tennis racket theorem
+(网球拍定理) or Dzhanibekov effect (贾尼别科夫效应). Vladimir
+Aleksandrovich Dzhanibekov (Russian: Владимир Александрович Джанибеков,
+中文：弗拉基米尔·亚历山德罗维奇·贾尼别科夫) noticed a logical
+consequence of this theorem in space in 1985.
+
+Now we assume that, for a rigid body,
+\(\mathrm I_{11} > \mathrm I_{22} > \mathrm I_{33}\), and:
+
+\begin{itemize}
+\tightlist{}
+\item
+  Case 1: rotation around \(\mathrm I_{11}\)
+
+  Here we assume that \(\omega_1 = \Omega\), and
+  \(\omega_2, \omega_3 \ll \Omega\), and according to the angular
+  momentum theorem, we have \[\left\{
+        \begin{aligned}
+            \mathrm I_{11} \dfrac{\mathrm d \boldsymbol \omega_1}{\mathrm dt} & = (\mathrm I_{22} - \mathrm I_{33}) \omega_2 \omega_3 \approx 0; \\
+            \mathrm I_{22} \dfrac{\mathrm d \boldsymbol \omega_2}{\mathrm dt} & = (\mathrm I_{33} - \mathrm I_{11}) \Omega \omega_3; \\
+            \mathrm I_{33} \dfrac{\mathrm d \boldsymbol \omega_3}{\mathrm dt} & = (\mathrm I_{11} - \mathrm I_{22}) \Omega \omega_2.
+        \end{aligned}
+    \right.\]
+
+  Take the time derivatives of these equations, and we get \[\left\{
+        \begin{aligned}
+            \mathrm I_{11} \dfrac{\mathrm d^2 \boldsymbol \omega_1}{\mathrm dt^2} & = 0; \\
+            \mathrm I_{22} \dfrac{\mathrm d^2 \boldsymbol \omega_2}{\mathrm dt^2} & = (\mathrm I_{33} - \mathrm I_{11}) \Omega \dfrac{\mathrm d \boldsymbol \omega_3}{\mathrm dt} = \dfrac{(\mathrm I_{33} - \mathrm I_{11})(\mathrm I_{11} - \mathrm I_{22})}{\mathrm I_{33}} \Omega^2 \omega_2; \\
+            \mathrm I_{33} \dfrac{\mathrm d^2 \boldsymbol \omega_3}{\mathrm dt^2} & = (\mathrm I_{11} - \mathrm I_{22}) \Omega \dfrac{\mathrm d \boldsymbol \omega_2}{\mathrm dt} = \dfrac{(\mathrm I_{33} - \mathrm I_{11})(\mathrm I_{11} - \mathrm I_{22})}{\mathrm I_{33}} \Omega^2 \omega_3.
+        \end{aligned}
+    \right.\]
+
+  Here, we have (\(\omega_3\) is similar to \(\omega_2\))
+  \[\ddot{\omega}_2 + \dfrac{(\mathrm I_{11} - \mathrm I_{33})(\mathrm I_{11} - \mathrm I_{22})}{\mathrm I_{22} \mathrm I_{33}} \Omega^2 \omega_2 = 0.\]
+
+  Let \(\dfrac{(\mathrm I_{11} - \mathrm I_{33})(\mathrm I_{11} - \mathrm I_{22})}{\mathrm I_{22} \mathrm I_{33}} \Omega^2= \alpha_2\). Because \(\alpha_2 > 0\), the general solution is \[\omega_2 = C_1 \sin \left( \sqrt{\alpha_2}t \right) + C_2 \cos \left( \sqrt{\alpha_2}t \right).\]
+
+  This is a periodic, bounded function (周期性有界函数), which means
+  that the rotation of directions \(2\) and \(3\) can be kept within a
+  certain range.
+\item
+  Case 2: rotation around \(\mathrm I_{22}\)
+
+  Here we assume that \(\omega_2 = \Omega\), and
+  \(\omega_1, \omega_3 \ll \Omega\).
+
+  Similar to Case 1, we know that
+  \[\ddot{\omega}_1 = \dfrac{(\mathrm I_{11} - \mathrm I_{22})(\mathrm I_{22} - \mathrm I_{33})}{\mathrm I_{11} \mathrm I_{33}} \Omega^2 \omega_1.\]
+
+  Let
+  \(\dfrac{(\mathrm I_{11} - \mathrm I_{22})(\mathrm I_{22} - \mathrm I_{33})}{\mathrm I_{11} \mathrm I_{33}} \Omega^2 = \alpha_1\).
+
+  Because \(\alpha_1 > 0\), the general solution is
+  \[\omega_1 = C_1 \exp \left( \sqrt{\alpha_1} t \right) + C_2 \exp \left( - \sqrt{\alpha_1} t \right).\]
+
+  This is not a periodic, bounded function, which means that the
+  rotation of direction \(1\) can be kept within a certain range.
+\end{itemize}
